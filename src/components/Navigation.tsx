@@ -6,6 +6,7 @@ import { withBasePath } from "@/lib/basePath";
 
 const navLinks = [
   { href: "/om-oss", label: "Om oss" },
+  { href: "/fasteradsmedlem", label: "Rådsmedlemmer" },
   { href: "/kurs", label: "Kurs" },
   { href: "/aktuelt", label: "Aktuelt" },
   { href: "/for-instruktorer", label: "For instruktører" },

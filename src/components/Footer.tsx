@@ -36,6 +36,7 @@ export function Footer() {
             <nav className="space-y-2">
               {[
                 { href: "/om-oss", label: "Om oss" },
+                { href: "/fasteradsmedlem", label: "Rådsmedlemmer" },
                 { href: "/kurs", label: "Kurs" },
                 { href: "/aktuelt", label: "Aktuelt" },
                 { href: "/for-instruktorer", label: "For instruktører" },
