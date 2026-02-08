@@ -12,7 +12,7 @@ export function PageHero({ title, subtitle, breadcrumb }: PageHeroProps) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {breadcrumb && (
           <nav className="mb-4">
-            <ol className="flex items-center gap-2 text-sm text-white/50">
+            <ol className="flex items-center gap-2 text-sm text-white/60">
               <li>
                 <Link href="/" className="hover:text-white/80 transition-colors">
                   Hjem

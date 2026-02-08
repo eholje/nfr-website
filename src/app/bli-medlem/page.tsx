@@ -16,7 +16,7 @@ export default function BliMedlem() {
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Bli støttemedlem
           </h1>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+          <p className="text-xl text-white/95 max-w-2xl mx-auto">
             Støtt arbeidet for bedre førstehjelpsopplæring i Norge
           </p>
         </div>

@@ -7,7 +7,7 @@ export function CTABanner() {
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
           Bli støttemedlem av Norsk Førstehjelpsråd
         </h2>
-        <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto">
+        <p className="text-lg text-white/95 mb-10 max-w-2xl mx-auto">
           Støtt arbeidet for bedre førstehjelpsopplæring i Norge. Hver krone
           investert i førstehjelp gir 12 kroner tilbake til samfunnet.
         </p>

@@ -76,7 +76,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
-          <p className="text-center text-sm text-white/50">
+          <p className="text-center text-sm text-white/60">
             &copy; {new Date().getFullYear()} Norsk Førstehjelpsråd. Alle
             rettigheter reservert.
           </p>
