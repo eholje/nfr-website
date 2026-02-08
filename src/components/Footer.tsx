@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
 
 export function Footer() {
   return (
@@ -8,8 +8,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <Image
-              src="/images/nfr-logo.svg"
+            <img
+              src={withBasePath("/images/nfr-logo.svg")}
               alt="Norsk Førstehjelpsråd"
               width={180}
               height={48}

@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
+import { withBasePath } from "@/lib/basePath";
 
 const navLinks = [
   { href: "/om-oss", label: "Om oss" },
@@ -33,12 +33,11 @@ export function Navigation() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex-shrink-0">
-            <Image
-              src="/images/nfr-logo.svg"
+            <img
+              src={withBasePath("/images/nfr-logo.svg")}
               alt="Norsk Førstehjelpsråd"
               width={200}
               height={54}
-              priority
             />
           </Link>
 
