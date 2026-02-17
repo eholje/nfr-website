@@ -29,34 +29,21 @@ const sampleNews = [
   },
 ];
 
-const courseCategories = [
-  {
-    title: "Grunnkurs førstehjelp",
-    description: "For privatpersoner som ønsker grunnleggende førstehjelpsopplæring.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-      </svg>
-    ),
-  },
-  {
-    title: "Bedriftskurs",
-    description: "Skreddersydd førstehjelpsopplæring for din arbeidsplass.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
-      </svg>
-    ),
-  },
-  {
-    title: "Instruktørkurs",
-    description: "Bli godkjent førstehjelpsinstruktør gjennom våre medlemsorganisasjoner.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
-      </svg>
-    ),
-  },
+const memberOrgs = [
+  "Røde Kors",
+  "Norsk Folkehjelp",
+  "Norsk Luftambulanse",
+  "Helsedirektoratet",
+  "Norges Livredningsselskap",
+  "Redningsselskapet",
+  "Norske Kvinners Sanitetsforening",
+  "Forsvarets Sanitet",
+  "Norsk Resuscitasjonsråd",
+  "DSB",
+  "Trygg Trafikk",
+  "LHL",
+  "Norges Speiderforbund",
+  "Nasjonalforeningen for Folkehelsen",
 ];
 
 export default function Home() {
@@ -66,36 +53,34 @@ export default function Home() {
       <ImpactNumbers />
 
       {/* About intro */}
-      <section className="py-20 bg-nfr-offwhite">
+      <section className="py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-nfr-navy/10 to-nfr-red/10 flex items-center justify-center overflow-hidden">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-nfr-primary/5 to-nfr-sage/15 flex items-center justify-center overflow-hidden">
               <div className="text-center p-8">
-                <svg className="w-24 h-24 text-nfr-navy/30 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-24 h-24 text-nfr-primary/20 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 8.25c0-2.485-2.099-4.502-4.688-4.502-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.748 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                 </svg>
                 <p className="text-nfr-muted text-sm">Bilde fra aktivitet</p>
               </div>
             </div>
             <div>
-              <SectionHeading
-                title="Om Norsk Førstehjelpsråd"
-                subtitle="Vi er paraplyorganisasjonen som samler Norges førstehjelpsaktører under ett tak."
-              />
-              <p className="text-nfr-body leading-relaxed mb-6">
-                Norsk Førstehjelpsråd ble opprettet for å koordinere og styrke
-                førstehjelpsopplæringen i Norge. Med 28 medlemsorganisasjoner og
-                2,2 millioner indirekte medlemmer er vi den sentrale aktøren for
-                førstehjelp i landet.
+              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+                Om oss
               </p>
+              <SectionHeading
+                title="Norges faglige autoritet for førstehjelp"
+                subtitle="Vi setter normen, samordner fag og forvalter kvalitet — slik at flere liv blir reddet."
+              />
               <p className="text-nfr-body leading-relaxed mb-8">
-                Vi arbeider for å profesjonalisere førstehjelpsopplæringen,
-                påvirke lovgivning og sikre at alle i Norge har tilgang til
-                livsviktig kunnskap.
+                Norsk Førstehjelpsråd er den nasjonale paraplyorganisasjonen
+                som samler 28 organisasjoner med 2,2 millioner indirekte
+                medlemmer. Vi er den normerende autoriteten som sikrer
+                kvaliteten på førstehjelpsopplæring i Norge.
               </p>
               <Link
                 href="/om-oss"
-                className="inline-flex items-center gap-2 text-nfr-red font-semibold hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-nfr-primary-mid font-semibold hover:gap-3 transition-all"
               >
                 Les mer om oss
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -108,21 +93,32 @@ export default function Home() {
       </section>
 
       {/* News */}
-      <section className="py-20">
+      <section className="py-28 bg-nfr-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            title="Aktuelt"
-            subtitle="Siste nytt fra Norsk Førstehjelpsråd"
-          />
+          <div className="flex items-end justify-between mb-12">
+            <SectionHeading
+              title="Aktuelt"
+              subtitle="Siste nytt fra Norsk Førstehjelpsråd"
+            />
+            <Link
+              href="/aktuelt"
+              className="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-nfr-primary-mid hover:gap-3 transition-all"
+            >
+              Se alle nyheter
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sampleNews.map((article) => (
               <NewsCard key={article.slug} {...article} />
             ))}
           </div>
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 md:hidden">
             <Link
               href="/aktuelt"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-nfr-navy px-8 py-3 font-semibold text-nfr-navy hover:bg-nfr-navy hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-nfr-primary-mid"
             >
               Se alle nyheter
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -133,60 +129,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Courses */}
-      <section className="py-20 bg-nfr-offwhite">
+      {/* Fagrådet */}
+      <section className="py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            title="Finn førstehjelpskurs"
-            subtitle="Vi tilbyr kurs for alle nivåer - fra grunnleggende førstehjelp til avanserte livredningskurs"
-            centered
-          />
-          <div className="grid md:grid-cols-3 gap-8">
-            {courseCategories.map((course) => (
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+                Faglig ledelse
+              </p>
+              <SectionHeading
+                title="Fagrådet — vår faglige ryggmarg"
+                subtitle="Ekspertutvalget som sikrer at Norges førstehjelpsopplæring bygger på beste tilgjengelige kunnskap"
+              />
+              <p className="text-nfr-body leading-relaxed mb-6">
+                Fagrådet er sammensatt av ledende fagpersoner innen akuttmedisin,
+                anestesiologi, traumatologi og prehospitalt arbeid. De utvikler
+                retningslinjer, kvalitetssikrer kursinnhold og rådgir om faglige
+                standarder.
+              </p>
               <Link
-                key={course.title}
-                href="/kurs"
-                className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1"
+                href="/om-oss"
+                className="inline-flex items-center gap-2 text-nfr-primary-mid font-semibold hover:gap-3 transition-all"
               >
-                <div className="w-14 h-14 rounded-xl bg-nfr-red/10 text-nfr-red flex items-center justify-center mb-6 group-hover:bg-nfr-red group-hover:text-white transition-colors">
-                  {course.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3">{course.title}</h3>
-                <p className="text-nfr-muted leading-relaxed">
-                  {course.description}
-                </p>
+                Les mer om Fagrådet
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
-            ))}
+            </div>
+            <div className="grid grid-cols-3 gap-4">
+              {[
+                { label: "Retningslinjer", desc: "Nasjonale førstehjelpsretningslinjer" },
+                { label: "Kvalitetssikring", desc: "Godkjenning av kurs og instruktører" },
+                { label: "Forskning", desc: "Evidensbasert opplæring" },
+                { label: "Rådgivning", desc: "Faglig veiledning til myndigheter" },
+                { label: "Standarder", desc: "Kursinnhold og kompetansekrav" },
+                { label: "Utvikling", desc: "Oppdatering av fagstoff" },
+              ].map((item) => (
+                <div key={item.label} className="bg-nfr-cream rounded-xl p-5 text-center">
+                  <p className="font-semibold text-nfr-dark text-sm mb-1">{item.label}</p>
+                  <p className="text-xs text-nfr-muted leading-snug">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Member orgs */}
-      <section className="py-20">
+      <section className="py-28 bg-nfr-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Våre medlemsorganisasjoner"
             subtitle="28 organisasjoner som sammen arbeider for bedre førstehjelp i Norge"
             centered
           />
-          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-6">
-            {Array.from({ length: 12 }).map((_, i) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
+            {memberOrgs.map((name) => (
               <div
-                key={i}
-                className="aspect-square rounded-xl bg-nfr-offwhite flex items-center justify-center p-4 hover:shadow-md transition-shadow"
+                key={name}
+                className="rounded-xl bg-white flex items-center justify-center p-5 hover:shadow-md transition-shadow min-h-[80px]"
               >
-                <span className="text-xs text-nfr-muted text-center">
-                  Medlem {i + 1}
+                <span className="text-sm font-medium text-nfr-dark text-center leading-tight">
+                  {name}
                 </span>
               </div>
             ))}
           </div>
           <div className="text-center mt-10">
             <Link
-              href="/om-oss"
-              className="text-nfr-red font-semibold hover:underline"
+              href="/fasteradsmedlem"
+              className="text-nfr-primary-mid font-semibold hover:underline"
             >
-              Se alle 28 medlemsorganisasjoner →
+              Se alle 28 medlemsorganisasjoner &rarr;
             </Link>
           </div>
         </div>

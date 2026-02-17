@@ -2,43 +2,62 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center bg-gradient-to-br from-nfr-navy via-nfr-navy to-nfr-navy-light overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-nfr-red blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-64 h-64 rounded-full bg-white blur-3xl" />
+    <section className="relative min-h-[700px] lg:min-h-[800px] flex items-center bg-nfr-primary overflow-hidden">
+      {/* Subtle texture */}
+      <div className="absolute inset-0 opacity-[0.04]">
+        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] rounded-full bg-nfr-sage blur-[120px]" />
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-nfr-accent blur-[100px]" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="max-w-3xl">
-          <div className="inline-block rounded-full bg-nfr-red/20 px-4 py-1.5 text-sm font-semibold text-nfr-red mb-6 border border-nfr-red/30">
-            Paraplyorganisasjonen for førstehjelp
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-40 pb-24 w-full">
+        <div className="grid lg:grid-cols-12 gap-12 items-end">
+          {/* Left: editorial type */}
+          <div className="lg:col-span-7">
+            <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-8">
+              Norsk Førstehjelpsråd
+            </p>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white leading-[0.95] mb-8">
+              Kunnskap som
+              <br />
+              redder{" "}
+              <span className="text-nfr-accent italic">liv</span>
+            </h1>
+            <p className="text-lg lg:text-xl text-white/70 mb-12 max-w-xl leading-relaxed font-light">
+              Norges normerende autoritet for førstehjelp. Vi setter faglige
+              standarder, kvalitetssikrer opplæring og samler 28 organisasjoner
+              i arbeidet for å redde flere liv.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/for-instruktorer"
+                className="rounded-full bg-nfr-accent px-8 py-4 text-center text-base font-semibold text-nfr-primary hover:bg-nfr-accent-dark transition-colors"
+              >
+                Våre retningslinjer
+              </Link>
+              <Link
+                href="/om-oss"
+                className="rounded-full border border-white/20 px-8 py-4 text-center text-base font-medium text-white hover:bg-white/5 transition-colors"
+              >
+                Om Fagrådet
+              </Link>
+            </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Sammen redder vi
-            <span className="text-nfr-red"> liv</span>
-          </h1>
-          <p className="text-lg lg:text-xl text-white/80 mb-10 max-w-2xl leading-relaxed">
-            Norsk Førstehjelpsråd samler 28 organisasjoner og 2,2 millioner
-            indirekte medlemmer i arbeidet for bedre førstehjelpsopplæring i
-            hele Norge.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/kurs"
-              className="rounded-full bg-nfr-red px-8 py-4 text-center text-base font-bold text-white hover:bg-nfr-red-dark transition-colors"
-            >
-              Finn kurs
-            </Link>
-            <Link
-              href="/bli-medlem"
-              className="rounded-full border-2 border-white/30 px-8 py-4 text-center text-base font-bold text-white hover:bg-white/10 transition-colors"
-            >
-              Bli medlem
-            </Link>
+
+          {/* Right: key quote */}
+          <div className="lg:col-span-5 hidden lg:block">
+            <blockquote className="border-l-2 border-nfr-accent/40 pl-8">
+              <p className="text-xl text-white/60 leading-relaxed italic">
+                &ldquo;Den første hjelpen du gir de første 10 minutter er like
+                viktig som den behandlingen helsetjenesten kan gi de neste 10
+                dager.&rdquo;
+              </p>
+            </blockquote>
           </div>
         </div>
       </div>
+
+      {/* Bottom decorative line */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-nfr-accent/30 to-transparent" />
     </section>
   );
 }

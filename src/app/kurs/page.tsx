@@ -4,38 +4,44 @@ import { CTABanner } from "@/components/CTABanner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kurs - Norsk Førstehjelpsråd",
-  description: "Finn førstehjelpskurs for privatpersoner, bedrifter og instruktører gjennom Norsk Førstehjelpsråd.",
+  title: "Kurs og kvalitetssikring - Norsk Førstehjelpsråd",
+  description:
+    "Norsk Førstehjelpsråd utdanner instruktører og kvalitetssikrer førstehjelpsopplæring i Norge. Vi selger ikke kurs — vi setter standarden.",
 };
 
-const courses = [
+const kvalitetssystem = [
   {
-    title: "Grunnkurs førstehjelp",
+    title: "Godkjente instruktører",
+    count: "4 027",
     description:
-      "For privatpersoner som ønsker grunnleggende førstehjelpsopplæring. Lær livsviktige ferdigheter som kan utgjøre forskjellen i en nødsituasjon.",
-    duration: "8 timer",
-    audience: "Alle",
+      "Instruktører som har gjennomført NFR-godkjent kurslederutdanning og holder gyldig sertifisering.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+      </svg>
+    ),
   },
   {
-    title: "Bedriftskurs",
+    title: "Godkjente virksomheter",
+    count: "350+",
     description:
-      "Skreddersydd førstehjelpsopplæring for din arbeidsplass. Oppfyll HMS-krav og gi dine ansatte trygghet til å handle når det gjelder.",
-    duration: "4-16 timer",
-    audience: "Bedrifter",
+      "Virksomheter og organisasjoner som er godkjent for å tilby førstehjelpskurs etter NFRs kvalitetskrav.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+      </svg>
+    ),
   },
   {
-    title: "Instruktørkurs",
+    title: "Godkjente kurskonsepter",
+    count: "12",
     description:
-      "Bli godkjent førstehjelpsinstruktør. For deg som ønsker å undervise i førstehjelp gjennom våre medlemsorganisasjoner.",
-    duration: "40 timer",
-    audience: "Instruktører",
-  },
-  {
-    title: "Spesialkurs",
-    description:
-      "Avanserte kurs i livredning, hjerte-lungeredning, og spesialtilpassede kurs for ulike sektorer og behov.",
-    duration: "Varierer",
-    audience: "Spesialisert",
+      "Faglig kvalitetssikrede kurskonsepter som sikrer enhetlig og evidensbasert opplæring over hele landet.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.745 3.745 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+      </svg>
+    ),
   },
 ];
 
@@ -43,69 +49,142 @@ export default function Kurs() {
   return (
     <>
       <PageHero
-        title="Førstehjelpskurs"
-        subtitle="Finn riktig kurs for deg, din bedrift eller organisasjon"
+        title="Kurs og kvalitetssikring"
+        subtitle="Vi utdanner instruktørene som utdanner Norge"
         breadcrumb={[{ label: "Kurs", href: "/kurs" }]}
       />
 
+      {/* NFR's role */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            {courses.map((course) => (
+          <div className="max-w-3xl">
+            <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+              Vår rolle
+            </p>
+            <h2 className="text-3xl lg:text-4xl mb-6">
+              NFR selger ikke førstehjelpskurs
+            </h2>
+            <div className="text-nfr-body space-y-4 text-lg leading-relaxed">
+              <p>
+                Norsk Førstehjelpsråd holder kurslederutdanninger — vi utdanner
+                og sertifiserer instruktørene som underviser i førstehjelp
+                gjennom våre medlemsorganisasjoner.
+              </p>
+              <p>
+                Vi utvikler nasjonale retningslinjer, kvalitetssikrer
+                kursinnhold og fører register over godkjente instruktører,
+                virksomheter og kurskonsepter. Slik sikrer vi at
+                førstehjelpsopplæring i Norge holder høy og enhetlig kvalitet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Kvalitetssystem */}
+      <section className="py-20 bg-nfr-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+              Kvalitetssystemet
+            </p>
+            <h2 className="text-3xl lg:text-4xl mb-4">
+              Tre pilarer for kvalitet
+            </h2>
+            <p className="text-nfr-muted text-lg max-w-2xl mx-auto">
+              NFRs kvalitetssystem sørger for at alle som underviser i
+              førstehjelp i Norge gjør det etter godkjente standarder.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {kvalitetssystem.map((item) => (
               <div
-                key={course.title}
-                className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow"
+                key={item.title}
+                className="bg-white rounded-2xl p-8 shadow-sm"
               >
-                <div className="aspect-[16/9] bg-gradient-to-br from-nfr-navy/5 to-nfr-red/5 flex items-center justify-center">
-                  <svg className="w-16 h-16 text-nfr-navy/20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342" />
-                  </svg>
+                <div className="w-14 h-14 rounded-xl bg-nfr-primary/10 text-nfr-primary flex items-center justify-center mb-6">
+                  {item.icon}
                 </div>
-                <div className="p-8">
-                  <div className="flex gap-3 mb-4">
-                    <span className="inline-block rounded-full bg-nfr-navy/10 px-3 py-1 text-xs font-semibold text-nfr-navy">
-                      {course.duration}
-                    </span>
-                    <span className="inline-block rounded-full bg-nfr-red/10 px-3 py-1 text-xs font-semibold text-nfr-red">
-                      {course.audience}
-                    </span>
-                  </div>
-                  <h2 className="text-2xl font-bold mb-4 group-hover:text-nfr-red transition-colors">
-                    {course.title}
-                  </h2>
-                  <p className="text-nfr-body leading-relaxed mb-6">
-                    {course.description}
-                  </p>
-                  <Link
-                    href="/kontakt"
-                    className="inline-flex items-center gap-2 text-nfr-red font-semibold hover:gap-3 transition-all"
-                  >
-                    Kontakt oss for mer info
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
+                <p className="text-3xl font-bold text-nfr-accent mb-2">
+                  {item.count}
+                </p>
+                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                <p className="text-nfr-muted leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Instructor info */}
-      <section className="py-16 bg-nfr-offwhite">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-lg text-nfr-body max-w-2xl mx-auto">
-            Kursene gjennomføres av våre{" "}
-            <strong className="text-nfr-dark">4 027 godkjente instruktører</strong>{" "}
-            gjennom våre medlemsorganisasjoner over hele Norge.
-          </p>
-          <Link
-            href="/kontakt"
-            className="inline-flex items-center gap-2 mt-8 rounded-full bg-nfr-navy px-8 py-4 font-bold text-white hover:bg-nfr-navy-light transition-colors"
-          >
-            Kontakt oss for tilpasset kurs
-          </Link>
+      {/* Kurslederutdanning */}
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+                Kurslederutdanning
+              </p>
+              <h2 className="text-3xl lg:text-4xl mb-6">
+                Bli godkjent førstehjelpsinstruktør
+              </h2>
+              <div className="text-nfr-body space-y-4 leading-relaxed">
+                <p>
+                  NFR tilbyr kurslederutdanning for deg som vil bli godkjent
+                  førstehjelpsinstruktør. Utdanningen gir deg kompetanse til å
+                  undervise i førstehjelp etter nasjonale retningslinjer.
+                </p>
+                <p>
+                  Kurslederutdanningen gjennomføres i samarbeid med våre
+                  medlemsorganisasjoner og gir deg tilgang til NFRs
+                  kvalitetssystem med oppdatert fagmateriell og
+                  instruktørnettverk.
+                </p>
+              </div>
+              <Link
+                href="/for-instruktorer"
+                className="inline-flex items-center gap-2 mt-8 text-nfr-primary-mid font-semibold hover:gap-3 transition-all"
+              >
+                Les mer for instruktører
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+            <div className="bg-nfr-cream rounded-2xl p-10">
+              <h3 className="font-bold text-lg mb-6">Vil du ta et kurs?</h3>
+              <p className="text-nfr-body leading-relaxed mb-6">
+                Førstehjelpskurs for privatpersoner og bedrifter tilbys av
+                våre medlemsorganisasjoner. Kontakt en av disse for å finne
+                kurs i ditt område:
+              </p>
+              <ul className="space-y-3 text-nfr-body">
+                {[
+                  "Røde Kors",
+                  "Norsk Folkehjelp",
+                  "Norske Kvinners Sanitetsforening",
+                  "Norsk Luftambulanse",
+                ].map((org) => (
+                  <li key={org} className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-nfr-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m4.5 12.75 6 6 9-13.5" />
+                    </svg>
+                    {org}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/fasteradsmedlem"
+                className="inline-flex items-center gap-2 mt-6 text-nfr-primary-mid font-semibold hover:gap-3 transition-all text-sm"
+              >
+                Se alle 28 medlemsorganisasjoner
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
