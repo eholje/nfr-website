@@ -180,8 +180,43 @@ export default function KursOgOpplaering() {
         </div>
       </section>
 
-      {/* Kurslederutdanning */}
+      {/* Key concepts */}
       <section className="py-20 bg-nfr-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            title="Konsepter og programmer"
+            subtitle="NFR utvikler og kvalitetssikrer flere sentrale opplæringskonsepter"
+          />
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Trafikalt grunnkurs førstehjelp (TGF)",
+                description: "Obligatorisk førstehjelpsopplæring for alle som tar førerkort i Norge. NFR kvalitetssikrer innholdet og godkjenner instruktørene.",
+              },
+              {
+                title: "Først på ulykkesstedet",
+                description: "Kurs for deg som kan komme først til en ulykke — fra trafikkulykker til fritidsaktiviteter. Fokus på systematisk tilnærming og trygg handling.",
+              },
+              {
+                title: "Hjerteløper / First responder",
+                description: "Initiativer der frivillige varsles via app ved hjertestans i nærheten. NFR støtter kvalitetssikring av opplæringen bak disse ordningene.",
+              },
+              {
+                title: "Risikoprofilbasert opplæring (Erasmus+)",
+                description: "Nytt konsept der førstehjelpsopplæring tilpasses mottakerens faktiske risikoprofil. Utvikles med Danmark og Latvia gjennom EU-finansiering.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-white rounded-xl p-8 shadow-sm">
+                <h3 className="font-bold text-nfr-dark text-lg mb-3">{item.title}</h3>
+                <p className="text-nfr-muted leading-relaxed text-sm">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Kurslederutdanning */}
+      <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>

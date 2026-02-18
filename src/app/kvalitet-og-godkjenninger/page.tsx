@@ -188,6 +188,105 @@ export default function KvalitetOgGodkjenninger() {
         </div>
       </section>
 
+      {/* Course concepts */}
+      <section className="py-20 bg-nfr-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            title="Godkjente kurskonsepter"
+            subtitle="12 kvalitetssikrede kurskonsepter dekker alt fra grunnopplæring til spesialiserte kurs"
+          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Grunnkurs førstehjelp",
+                target: "Privatpersoner og ansatte",
+                duration: "6–8 timer",
+              },
+              {
+                title: "Trafikalt grunnkurs førstehjelp (TGF)",
+                target: "Førerkortkandidater",
+                duration: "4 timer",
+              },
+              {
+                title: "Førstehjelp for barn",
+                target: "Foreldre og barnehageansatte",
+                duration: "4–6 timer",
+              },
+              {
+                title: "Hjerte-lunge-redning (HLR)",
+                target: "Alle målgrupper",
+                duration: "2–4 timer",
+              },
+              {
+                title: "Førstehjelp for virksomheter",
+                target: "Bedrifter og organisasjoner",
+                duration: "6–8 timer",
+              },
+              {
+                title: "Avansert førstehjelp",
+                target: "Helsepersonell og beredskap",
+                duration: "8–16 timer",
+              },
+            ].map((concept) => (
+              <div
+                key={concept.title}
+                className="bg-white rounded-xl p-6 shadow-sm"
+              >
+                <h3 className="font-bold text-nfr-dark mb-2">
+                  {concept.title}
+                </h3>
+                <div className="space-y-1 text-sm">
+                  <p className="text-nfr-muted">
+                    <span className="font-medium text-nfr-dark">Målgruppe:</span>{" "}
+                    {concept.target}
+                  </p>
+                  <p className="text-nfr-muted">
+                    <span className="font-medium text-nfr-dark">Varighet:</span>{" "}
+                    {concept.duration}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-nfr-muted mt-8 italic">
+            Fullstendig liste over alle 12 godkjente kurskonsepter oppdateres i
+            samarbeid med Fagrådet.
+          </p>
+        </div>
+      </section>
+
+      {/* Existing registry info */}
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-nfr-primary rounded-2xl p-10 lg:p-14 text-center">
+              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+                Instruktørregisteret
+              </p>
+              <h2 className="text-2xl lg:text-3xl text-white mb-4">
+                Finn godkjent instruktør
+              </h2>
+              <p className="text-white/60 leading-relaxed mb-8">
+                NFR fører et nasjonalt register over alle godkjente
+                førstehjelpsinstruktører. Registeret brukes av arbeidsgivere,
+                skoler og organisasjoner for å verifisere instruktørers
+                godkjenning.
+              </p>
+              <p className="text-white/40 text-sm italic mb-8">
+                Søkbart register integreres på nettstedet i fase 2. Kontakt
+                NFR for å verifisere godkjenninger i mellomtiden.
+              </p>
+              <Link
+                href="/kontakt"
+                className="inline-flex items-center gap-2 rounded-full bg-nfr-accent px-8 py-4 text-base font-semibold text-nfr-primary hover:bg-nfr-accent-dark transition-colors"
+              >
+                Kontakt oss for å verifisere godkjenning
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-nfr-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">

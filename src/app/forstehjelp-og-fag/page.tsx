@@ -196,6 +196,79 @@ export default function ForstehjelOgFag() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-20 bg-nfr-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+                Ofte stilte spørsmål
+              </p>
+              <h2 className="text-3xl lg:text-4xl mb-4">
+                FAQ om førstehjelp
+              </h2>
+            </div>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "Hva er førstehjelp?",
+                  a: "Førstehjelp er den hjelpen som gis av tilstedeværende personer ved akutt sykdom eller skade, før profesjonell helsehjelp overtar. Førstehjelp kan være alt fra å ringe 113 til å gi hjerte-lunge-redning (HLR).",
+                },
+                {
+                  q: "Når skal jeg ringe 113?",
+                  a: "Ring 113 ved livstruende situasjoner: bevisstløshet, hjertestans, alvorlige pustevansker, store blødninger, mistanke om slag eller hjerteinfarkt, alvorlige ulykker, eller når du er usikker på alvorlighetsgraden. Det er alltid bedre å ringe én gang for mye enn én for lite.",
+                },
+                {
+                  q: "Hvor ofte bør man oppdatere førstehjelpskunnskapene sine?",
+                  a: "NFR anbefaler å oppdatere førstehjelpskunnskapene minst hvert femte år. Retningslinjer oppdateres jevnlig basert på ny forskning, og det er viktig å holde seg oppdatert. Mange arbeidsgivere har krav om jevnlig opplæring.",
+                },
+                {
+                  q: "Kan man bli saksøkt for å gi førstehjelp?",
+                  a: "I Norge har vi ikke en tradisjon for å saksøke hjelpere. Tvert imot — det finnes en moralsk og i noen tilfeller juridisk plikt til å hjelpe. Helsepersonelloven og straffelovens § 287 pålegger en hjelpeplikt ved alvorlige situasjoner. Du kan ikke gi feil førstehjelp — det eneste som er feil er å ikke gjøre noe.",
+                },
+                {
+                  q: "Hva er forskjellen på NFR og organisasjoner som tilbyr kurs?",
+                  a: "NFR er den nasjonale paraplyorganisasjonen som setter faglige standarder og kvalitetssikrer opplæring. Vi selger ikke kurs — vi utdanner instruktørene, godkjenner kurskonsepter og fører register. Kurs tilbys av våre 28 medlemsorganisasjoner som Røde Kors, Norsk Folkehjelp og andre.",
+                },
+                {
+                  q: "Hva betyr det at NFR er «normerende autoritet»?",
+                  a: "Det betyr at NFR setter standarden for hva som er riktig førstehjelp i Norge. Gjennom Fagrådet — et ekspertutvalg av ledende medisinere — utvikler vi nasjonale retningslinjer som all førstehjelpsopplæring skal bygge på. Vi er den faglige autoriteten som sikrer kvalitet og sammenheng.",
+                },
+              ].map((item) => (
+                <details
+                  key={item.q}
+                  className="group bg-white rounded-xl shadow-sm"
+                >
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <h3 className="font-semibold text-nfr-dark pr-4">
+                      {item.q}
+                    </h3>
+                    <svg
+                      className="w-5 h-5 text-nfr-muted flex-shrink-0 group-open:rotate-180 transition-transform"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  </summary>
+                  <div className="px-6 pb-6">
+                    <p className="text-nfr-body leading-relaxed text-sm">
+                      {item.a}
+                    </p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <CTABanner />
     </>
   );
