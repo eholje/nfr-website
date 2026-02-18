@@ -5,12 +5,12 @@ import { useState, useEffect } from "react";
 import { withBasePath } from "@/lib/basePath";
 
 const navLinks = [
-  { href: "/om-oss", label: "Om oss" },
-  { href: "/fasteradsmedlem", label: "Rådsmedlemmer" },
-  { href: "/kurs", label: "Kurs" },
-  { href: "/aktuelt", label: "Aktuelt" },
-  { href: "/for-instruktorer", label: "For instruktører" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "/om-nfr", label: "Om NFR" },
+  { href: "/forstehjelp-og-fag", label: "Førstehjelp & fag" },
+  { href: "/kurs-og-opplaering", label: "Kurs & opplæring" },
+  { href: "/kvalitet-og-godkjenninger", label: "Kvalitet & godkjenninger" },
+  { href: "/prosjekter-og-konsepter", label: "Prosjekter & konsepter" },
+  { href: "/nyheter-og-innsikt", label: "Nyheter & innsikt" },
 ];
 
 export function Navigation() {
@@ -27,8 +27,8 @@ export function Navigation() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white shadow-md"
-          : "bg-white/90 backdrop-blur-sm"
+          ? "bg-white/95 backdrop-blur-sm shadow-sm"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -39,25 +39,30 @@ export function Navigation() {
               alt="Norsk Førstehjelpsråd"
               width={200}
               height={54}
+              className={scrolled ? "" : "brightness-0 invert"}
             />
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-semibold text-nfr-dark hover:text-nfr-red transition-colors"
+                className={`text-sm font-medium transition-colors whitespace-nowrap ${
+                  scrolled
+                    ? "text-nfr-dark hover:text-nfr-primary-mid"
+                    : "text-white/80 hover:text-white"
+                }`}
               >
                 {link.label}
               </Link>
             ))}
             <Link
-              href="/bli-medlem"
-              className="rounded-full bg-nfr-red px-6 py-2.5 text-sm font-bold text-white hover:bg-nfr-red-dark transition-colors"
+              href="/stott-oss"
+              className="rounded-full bg-nfr-accent px-6 py-2.5 text-sm font-semibold text-nfr-primary hover:bg-nfr-accent-dark transition-colors whitespace-nowrap"
             >
-              Bli medlem
+              Støtt oss
             </Link>
           </nav>
 
@@ -69,19 +74,19 @@ export function Navigation() {
           >
             <div className="space-y-1.5">
               <span
-                className={`block h-0.5 w-6 bg-nfr-dark transition-transform ${
-                  menuOpen ? "translate-y-2 rotate-45" : ""
-                }`}
+                className={`block h-0.5 w-6 transition-transform ${
+                  scrolled ? "bg-nfr-dark" : "bg-white"
+                } ${menuOpen ? "translate-y-2 rotate-45" : ""}`}
               />
               <span
-                className={`block h-0.5 w-6 bg-nfr-dark transition-opacity ${
-                  menuOpen ? "opacity-0" : ""
-                }`}
+                className={`block h-0.5 w-6 transition-opacity ${
+                  scrolled ? "bg-nfr-dark" : "bg-white"
+                } ${menuOpen ? "opacity-0" : ""}`}
               />
               <span
-                className={`block h-0.5 w-6 bg-nfr-dark transition-transform ${
-                  menuOpen ? "-translate-y-2 -rotate-45" : ""
-                }`}
+                className={`block h-0.5 w-6 transition-transform ${
+                  scrolled ? "bg-nfr-dark" : "bg-white"
+                } ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`}
               />
             </div>
           </button>
@@ -90,24 +95,24 @@ export function Navigation() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-white border-t">
+        <div className="lg:hidden bg-white border-t border-nfr-stone">
           <nav className="mx-auto max-w-7xl px-4 py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-base font-semibold text-nfr-dark hover:text-nfr-red py-2"
+                className="text-base font-medium text-nfr-dark hover:text-nfr-primary-mid py-2"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
             <Link
-              href="/bli-medlem"
-              className="rounded-full bg-nfr-red px-6 py-3 text-center text-sm font-bold text-white hover:bg-nfr-red-dark transition-colors"
+              href="/stott-oss"
+              className="rounded-full bg-nfr-accent px-6 py-3 text-center text-sm font-semibold text-nfr-primary hover:bg-nfr-accent-dark transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              Bli medlem
+              Støtt oss
             </Link>
           </nav>
         </div>
