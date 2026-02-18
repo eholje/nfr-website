@@ -11,7 +11,7 @@ interface NewsCardProps {
 export function NewsCard({ title, date, excerpt, slug, image }: NewsCardProps) {
   return (
     <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-      <div className="aspect-[16/10] bg-nfr-offwhite overflow-hidden">
+      <div className="aspect-[16/10] bg-nfr-stone overflow-hidden">
         {image ? (
           <img
             src={image}
@@ -19,9 +19,9 @@ export function NewsCard({ title, date, excerpt, slug, image }: NewsCardProps) {
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-nfr-navy/5 to-nfr-red/5">
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-nfr-primary/5 to-nfr-sage/10">
             <svg
-              className="w-12 h-12 text-nfr-navy/20"
+              className="w-12 h-12 text-nfr-primary/15"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -38,15 +38,15 @@ export function NewsCard({ title, date, excerpt, slug, image }: NewsCardProps) {
       </div>
       <div className="p-6">
         <time className="text-sm text-nfr-muted">{date}</time>
-        <h3 className="text-lg font-bold mt-2 mb-3 group-hover:text-nfr-red transition-colors">
+        <h3 className="text-lg font-bold mt-2 mb-3 font-[family-name:var(--font-dm-serif)] font-normal group-hover:text-nfr-primary-mid transition-colors">
           {title}
         </h3>
         <p className="text-sm text-nfr-body/80 leading-relaxed line-clamp-3">
           {excerpt}
         </p>
         <Link
-          href={`/aktuelt/${slug}`}
-          className="inline-flex items-center gap-1 text-sm font-semibold text-nfr-red mt-4 hover:gap-2 transition-all"
+          href={`/nyheter-og-innsikt/${slug}`}
+          className="inline-flex items-center gap-1 text-sm font-semibold text-nfr-primary-mid mt-4 hover:gap-2 transition-all"
         >
           Les mer
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

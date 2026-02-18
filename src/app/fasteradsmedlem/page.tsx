@@ -150,20 +150,20 @@ const members = [
 ];
 
 const categoryColors: Record<string, string> = {
-  Myndighet: "bg-blue-100 text-blue-800",
-  Helse: "bg-rose-100 text-rose-800",
-  Medisin: "bg-purple-100 text-purple-800",
-  Beredskap: "bg-orange-100 text-orange-800",
-  Livredning: "bg-cyan-100 text-cyan-800",
-  Frivillighet: "bg-green-100 text-green-800",
-  Friluftsliv: "bg-emerald-100 text-emerald-800",
-  Arbeidsliv: "bg-amber-100 text-amber-800",
-  Forsvar: "bg-slate-100 text-slate-800",
-  Idrett: "bg-sky-100 text-sky-800",
-  Akuttmedisin: "bg-red-100 text-red-800",
-  Bransje: "bg-gray-100 text-gray-800",
-  Sikkerhet: "bg-yellow-100 text-yellow-800",
-  Trafikksikkerhet: "bg-lime-100 text-lime-800",
+  Myndighet: "bg-nfr-primary/10 text-nfr-primary",
+  Helse: "bg-nfr-accent/10 text-nfr-accent-dark",
+  Medisin: "bg-nfr-primary/10 text-nfr-primary",
+  Beredskap: "bg-nfr-accent/10 text-nfr-accent-dark",
+  Livredning: "bg-nfr-sage/20 text-nfr-primary",
+  Frivillighet: "bg-nfr-sage/20 text-nfr-primary",
+  Friluftsliv: "bg-nfr-sage/20 text-nfr-primary",
+  Arbeidsliv: "bg-nfr-stone text-nfr-dark",
+  Forsvar: "bg-nfr-stone text-nfr-dark",
+  Idrett: "bg-nfr-sage/20 text-nfr-primary",
+  Akuttmedisin: "bg-nfr-accent/10 text-nfr-accent-dark",
+  Bransje: "bg-nfr-stone text-nfr-dark",
+  Sikkerhet: "bg-nfr-stone text-nfr-dark",
+  Trafikksikkerhet: "bg-nfr-accent/10 text-nfr-accent-dark",
 };
 
 export default function Fasteradsmedlem() {
@@ -173,13 +173,13 @@ export default function Fasteradsmedlem() {
         title="Faste rådsmedlem"
         subtitle="Organisasjonene som utgjør Norsk Førstehjelpsråd — sammen for bedre førstehjelp i Norge"
         breadcrumb={[
-          { label: "Om oss", href: "/om-oss" },
+          { label: "Om NFR", href: "/om-nfr" },
           { label: "Faste rådsmedlem", href: "/fasteradsmedlem" },
         ]}
       />
 
       {/* Stats bar */}
-      <section className="bg-nfr-offwhite py-8 border-b">
+      <section className="bg-nfr-cream py-8 border-b">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <p className="text-nfr-body">
@@ -195,18 +195,18 @@ export default function Fasteradsmedlem() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {members.map((member) => {
-              const colors = categoryColors[member.category] || "bg-gray-100 text-gray-800";
+              const colors = categoryColors[member.category] || "bg-nfr-stone text-nfr-dark";
               const Content = (
                 <>
                   <div className="flex items-start justify-between gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-nfr-navy/5 flex items-center justify-center flex-shrink-0">
-                      <span className="text-lg font-bold text-nfr-navy/40">
+                    <div className="w-12 h-12 rounded-xl bg-nfr-primary/5 flex items-center justify-center flex-shrink-0">
+                      <span className="text-lg font-bold text-nfr-primary/40">
                         {member.name.charAt(0)}
                       </span>
                     </div>
                     {member.url && (
                       <svg
-                        className="w-4 h-4 text-nfr-muted flex-shrink-0 mt-1 group-hover:text-nfr-red transition-colors"
+                        className="w-4 h-4 text-nfr-muted flex-shrink-0 mt-1 group-hover:text-nfr-primary-mid transition-colors"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -220,7 +220,7 @@ export default function Fasteradsmedlem() {
                       </svg>
                     )}
                   </div>
-                  <h3 className="font-bold text-nfr-dark leading-snug mb-3 group-hover:text-nfr-red transition-colors">
+                  <h3 className="font-bold text-nfr-dark leading-snug mb-3 group-hover:text-nfr-primary-mid transition-colors">
                     {member.name}
                   </h3>
                   <span
@@ -238,7 +238,7 @@ export default function Fasteradsmedlem() {
                     href={member.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
+                    className="group block bg-white rounded-2xl p-6 border border-nfr-stone shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
                   >
                     {Content}
                   </a>
@@ -248,7 +248,7 @@ export default function Fasteradsmedlem() {
               return (
                 <div
                   key={member.name}
-                  className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm"
+                  className="group bg-white rounded-2xl p-6 border border-nfr-stone shadow-sm"
                 >
                   {Content}
                 </div>
@@ -259,7 +259,7 @@ export default function Fasteradsmedlem() {
       </section>
 
       {/* Contact info */}
-      <section className="py-16 bg-nfr-offwhite">
+      <section className="py-16 bg-nfr-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-2xl font-bold mb-6">Kontaktinformasjon</h2>

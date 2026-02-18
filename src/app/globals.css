@@ -1,38 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --nfr-red: #CF002D;
-  --nfr-red-dark: #A80024;
-  --nfr-navy: #0E256A;
-  --nfr-navy-light: #6174AF;
-  --nfr-white: #FFFFFF;
-  --nfr-offwhite: #F5F3F0;
-  --nfr-dark: #1A1A2E;
-  --nfr-body: #333333;
-  --nfr-muted: #5F6672;
+  /* Deep Forest Authority palette */
+  --nfr-primary: #1B3A2D;
+  --nfr-primary-mid: #2D5F4A;
+  --nfr-accent: #C4973B;
+  --nfr-accent-dark: #A67D2E;
+  --nfr-sage: #8BAF9C;
+  --nfr-cream: #F6F3ED;
+  --nfr-stone: #E8E4DC;
+  --nfr-dark: #1A1A1A;
+  --nfr-body: #2D2D2D;
+  --nfr-muted: #5C5A55;
 }
 
 @theme inline {
-  --color-nfr-red: var(--nfr-red);
-  --color-nfr-red-dark: var(--nfr-red-dark);
-  --color-nfr-navy: var(--nfr-navy);
-  --color-nfr-navy-light: var(--nfr-navy-light);
-  --color-nfr-offwhite: var(--nfr-offwhite);
+  --color-nfr-primary: var(--nfr-primary);
+  --color-nfr-primary-mid: var(--nfr-primary-mid);
+  --color-nfr-accent: var(--nfr-accent);
+  --color-nfr-accent-dark: var(--nfr-accent-dark);
+  --color-nfr-sage: var(--nfr-sage);
+  --color-nfr-cream: var(--nfr-cream);
+  --color-nfr-stone: var(--nfr-stone);
   --color-nfr-dark: var(--nfr-dark);
   --color-nfr-body: var(--nfr-body);
   --color-nfr-muted: var(--nfr-muted);
-  --font-sans: var(--font-open-sans);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-dm-serif);
 }
 
 body {
-  background: var(--nfr-white);
+  background: var(--nfr-cream);
   color: var(--nfr-body);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--nfr-dark);
-  font-weight: 700;
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: 400;
 }
 
 @keyframes count-up {
@@ -42,6 +48,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .animate-in {
   animation: count-up 0.6s ease-out forwards;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
 }
 
 html {

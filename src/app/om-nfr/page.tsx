@@ -186,7 +186,7 @@ export default function OmNFR() {
                   {fagraadMembers.map((member, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-4 pb-4 border-b border-gray-100 last:border-0 last:pb-0"
+                      className="flex items-center gap-4 pb-4 border-b border-nfr-stone/50 last:border-0 last:pb-0"
                     >
                       <div className="w-12 h-12 rounded-full bg-nfr-primary/10 flex items-center justify-center flex-shrink-0">
                         <svg

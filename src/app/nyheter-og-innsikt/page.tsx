@@ -85,7 +85,7 @@ export default function NyheterOgInnsikt() {
             <article className="group grid lg:grid-cols-2 gap-8 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
               <div className="aspect-[16/10] lg:aspect-auto bg-gradient-to-br from-nfr-primary/5 to-nfr-sage/10 flex items-center justify-center min-h-[300px]">
                 <svg
-                  className="w-16 h-16 text-nfr-navy/20"
+                  className="w-16 h-16 text-nfr-primary/20"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

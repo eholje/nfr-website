@@ -123,7 +123,7 @@ export default function Home() {
       </section>
 
       {/* About intro */}
-      <section className="py-28 bg-white">
+      <section className="py-28 bg-nfr-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-nfr-primary/5 to-nfr-sage/15 flex items-center justify-center overflow-hidden">
@@ -163,7 +163,7 @@ export default function Home() {
       </section>
 
       {/* Generalsekretæren */}
-      <section className="py-28 bg-nfr-cream">
+      <section className="py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-5">
@@ -211,7 +211,7 @@ export default function Home() {
       </section>
 
       {/* News */}
-      <section className="py-28 bg-white">
+      <section className="py-28 bg-nfr-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-12">
             <SectionHeading
@@ -248,7 +248,7 @@ export default function Home() {
       </section>
 
       {/* Fagrådet */}
-      <section className="py-28 bg-white">
+      <section className="py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -295,7 +295,7 @@ export default function Home() {
       </section>
 
       {/* Hva vi gjør — initiativer */}
-      <section className="py-28 bg-nfr-cream">
+      <section className="py-28 bg-nfr-cream relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start mb-16">
             <div>
@@ -357,7 +357,7 @@ export default function Home() {
       </section>
 
       {/* Member orgs */}
-      <section className="py-28 bg-nfr-cream">
+      <section className="py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Våre medlemsorganisasjoner"

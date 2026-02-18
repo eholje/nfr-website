@@ -92,7 +92,7 @@ export default function ProsjekterOgKonsepter() {
             {projects.map((project) => (
               <div
                 key={project.title}
-                className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-md transition-shadow"
+                className="bg-white rounded-2xl p-8 border border-nfr-stone hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-semibold uppercase tracking-wider text-nfr-accent bg-nfr-accent/10 px-3 py-1 rounded-full">
