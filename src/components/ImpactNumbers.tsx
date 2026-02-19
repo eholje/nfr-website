@@ -112,10 +112,10 @@ export function ImpactNumbers() {
                 <div className="text-lg font-semibold text-white/90 mb-1">
                   {stat.label}
                 </div>
-                <div className="text-base text-white/50 font-light mb-3">
+                <div className="text-base text-white/60 font-light mb-3">
                   {stat.context}
                 </div>
-                <div className="text-xs text-white/30">
+                <div className="text-xs text-white/50">
                   Kilde: {stat.source}
                 </div>
               </div>
@@ -127,7 +127,7 @@ export function ImpactNumbers() {
       {/* Part 2: Vår innsats */}
       <section ref={impactRef} className="bg-nfr-cream py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+          <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
             Vår innsats
           </p>
           <h2 className="text-3xl sm:text-4xl text-nfr-primary mb-16 font-[family-name:var(--font-dm-serif)]">
@@ -142,13 +142,13 @@ export function ImpactNumbers() {
                 }`}
                 style={{ animationDelay: `${i * 150}ms` }}
               >
-                <div className="text-5xl lg:text-6xl text-nfr-accent mb-3 font-[family-name:var(--font-dm-serif)]">
+                <div className="text-5xl lg:text-6xl text-nfr-accent-text mb-3 font-[family-name:var(--font-dm-serif)]">
                   {stat.value}
                 </div>
                 <div className="text-sm font-semibold text-nfr-primary/90 uppercase tracking-wider mb-2">
                   {stat.label}
                 </div>
-                <div className="text-xs text-nfr-primary/40">
+                <div className="text-xs text-nfr-muted">
                   Kilde: {stat.source}
                 </div>
               </div>

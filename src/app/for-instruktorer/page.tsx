@@ -48,7 +48,7 @@ export default function ForInstruktorer() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
                 Retningslinjer 2025–2026
               </p>
               <SectionHeading
@@ -103,7 +103,7 @@ export default function ForInstruktorer() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+            <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
               Under utvikling
             </p>
             <SectionHeading

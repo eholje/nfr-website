@@ -55,7 +55,7 @@ export function Hero() {
                 viktig som den behandlingen helsetjenesten kan gi de neste 10
                 dager.&rdquo;
               </p>
-              <footer className="mt-4 text-sm text-white/40">
+              <footer className="mt-4 text-sm text-white/50">
                 Conrad Bjørshol
               </footer>
             </blockquote>

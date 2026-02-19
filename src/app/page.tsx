@@ -60,7 +60,7 @@ export default function Home() {
                   mener husholdninger må kunne klare seg uten samfunnets hjelp
                   i én uke
                 </p>
-                <p className="text-white/40 text-sm mt-2">DSB/Ipsos 2024</p>
+                <p className="text-white/50 text-sm mt-2">DSB/Ipsos 2024</p>
               </div>
               <Link
                 href="/stott-oss"
@@ -75,7 +75,7 @@ export default function Home() {
                   &ldquo;Befolkningen er en viktig ressurs ved akutt sykdom og
                   alvorlige ulykker&rdquo;
                 </p>
-                <footer className="mt-3 text-white/40 text-sm">
+                <footer className="mt-3 text-white/50 text-sm">
                   Meld. St. 23 — Akuttmeldingen
                 </footer>
               </blockquote>
@@ -84,7 +84,7 @@ export default function Home() {
                   &ldquo;Regjeringen skal sørge for at det sivile samfunnet er
                   forberedt på krise og krig&rdquo;
                 </p>
-                <footer className="mt-3 text-white/40 text-sm">
+                <footer className="mt-3 text-white/50 text-sm">
                   Meld. St. 9 — Totalberedskapsmeldingen
                 </footer>
               </blockquote>
@@ -115,7 +115,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
                 Om oss
               </p>
               <SectionHeading
@@ -158,7 +158,7 @@ export default function Home() {
               </div>
             </div>
             <div className="lg:col-span-7">
-              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
                 Generalsekretæren
               </p>
               <h2 className="text-3xl lg:text-4xl font-bold text-nfr-dark mb-2">
@@ -232,7 +232,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
                 Faglig ledelse
               </p>
               <SectionHeading
@@ -279,7 +279,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start mb-16">
             <div>
-              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
                 Hva vi gjør
               </p>
               <SectionHeading

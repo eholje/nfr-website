@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <section className="bg-nfr-cream min-h-[60vh] flex items-center">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center py-20">
-        <p className="text-nfr-accent font-medium tracking-wide text-sm mb-4">
+        <p className="text-nfr-accent-text font-medium tracking-wide text-sm mb-4">
           404
         </p>
         <h1 className="text-4xl lg:text-6xl text-nfr-primary mb-6 font-[family-name:var(--font-dm-serif)]">

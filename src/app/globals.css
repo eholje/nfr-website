@@ -6,6 +6,7 @@
   --nfr-primary-mid: #2D5F4A;
   --nfr-accent: #C4973B;
   --nfr-accent-dark: #A67D2E;
+  --nfr-accent-text: #856A2F;
   --nfr-sage: #8BAF9C;
   --nfr-cream: #F6F3ED;
   --nfr-stone: #E8E4DC;
@@ -19,6 +20,7 @@
   --color-nfr-primary-mid: var(--nfr-primary-mid);
   --color-nfr-accent: var(--nfr-accent);
   --color-nfr-accent-dark: var(--nfr-accent-dark);
+  --color-nfr-accent-text: var(--nfr-accent-text);
   --color-nfr-sage: var(--nfr-sage);
   --color-nfr-cream: var(--nfr-cream);
   --color-nfr-stone: var(--nfr-stone);
@@ -29,16 +31,18 @@
   --font-heading: var(--font-dm-serif);
 }
 
-body {
-  background: var(--nfr-cream);
-  color: var(--nfr-body);
-  font-family: var(--font-sans), system-ui, sans-serif;
-}
+@layer base {
+  body {
+    background: var(--nfr-cream);
+    color: var(--nfr-body);
+    font-family: var(--font-sans), system-ui, sans-serif;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--nfr-dark);
-  font-family: var(--font-heading), Georgia, serif;
-  font-weight: 400;
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--nfr-dark);
+    font-family: var(--font-heading), Georgia, serif;
+    font-weight: 400;
+  }
 }
 
 @keyframes count-up {

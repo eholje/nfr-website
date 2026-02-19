@@ -157,7 +157,7 @@ export default function OmNFR() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
                 Faglig ledelse
               </p>
               <SectionHeading

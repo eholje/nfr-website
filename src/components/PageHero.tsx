@@ -17,7 +17,7 @@ export function PageHero({ title, subtitle, breadcrumb }: PageHeroProps) {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {breadcrumb && (
           <nav aria-label="Brødsmulesti" className="mb-6">
-            <ol className="flex items-center gap-2 text-sm text-white/40">
+            <ol className="flex items-center gap-2 text-sm text-white/50">
               <li>
                 <Link href="/" className="hover:text-white/70 transition-colors">
                   Hjem

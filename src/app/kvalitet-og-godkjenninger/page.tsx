@@ -61,7 +61,7 @@ export default function KvalitetOgGodkjenninger() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+            <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
               Godkjenningsordningen
             </p>
             <SectionHeading
@@ -87,7 +87,7 @@ export default function KvalitetOgGodkjenninger() {
       <section className="py-20 bg-nfr-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+            <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
               Tre registre
             </p>
             <h2 className="text-3xl lg:text-4xl mb-4">
@@ -107,7 +107,7 @@ export default function KvalitetOgGodkjenninger() {
                 <div className="w-14 h-14 rounded-xl bg-nfr-primary/10 text-nfr-primary flex items-center justify-center mb-6">
                   {item.icon}
                 </div>
-                <p className="text-3xl font-bold text-nfr-accent mb-2">
+                <p className="text-3xl font-bold text-nfr-accent-text mb-2">
                   {item.count}
                 </p>
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
@@ -128,7 +128,7 @@ export default function KvalitetOgGodkjenninger() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
                 Krav og kriterier
               </p>
               <SectionHeading
@@ -272,7 +272,7 @@ export default function KvalitetOgGodkjenninger() {
                 skoler og organisasjoner for å verifisere instruktørers
                 godkjenning.
               </p>
-              <p className="text-white/40 text-sm italic mb-8">
+              <p className="text-white/50 text-sm italic mb-8">
                 Søkbart register integreres på nettstedet i fase 2. Kontakt
                 NFR for å verifisere godkjenninger i mellomtiden.
               </p>

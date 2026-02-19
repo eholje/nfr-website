@@ -95,7 +95,7 @@ export default function ProsjekterOgKonsepter() {
                 className="bg-white rounded-2xl p-8 border border-nfr-stone hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-nfr-accent bg-nfr-accent/10 px-3 py-1 rounded-full">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-nfr-accent-text bg-nfr-accent/10 px-3 py-1 rounded-full">
                     {project.status}
                   </span>
                   <span className="text-sm font-bold text-nfr-primary">
@@ -139,7 +139,7 @@ export default function ProsjekterOgKonsepter() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+            <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
               Resultater
             </p>
             <SectionHeading
@@ -153,7 +153,7 @@ export default function ProsjekterOgKonsepter() {
                 { value: "3", label: "Land i EU-prosjekt" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-4xl lg:text-5xl font-bold text-nfr-accent">
+                  <p className="text-4xl lg:text-5xl font-bold text-nfr-accent-text">
                     {stat.value}
                   </p>
                   <p className="text-sm text-nfr-muted mt-2">{stat.label}</p>
