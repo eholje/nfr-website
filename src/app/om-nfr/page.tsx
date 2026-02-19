@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { ImpactNumbers } from "@/components/ImpactNumbers";
 import { SectionHeading } from "@/components/SectionHeading";
 import { CTABanner } from "@/components/CTABanner";
+import { withBasePath } from "@/lib/basePath";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -232,9 +234,11 @@ export default function OmNFR() {
           <div className="max-w-md mx-auto">
             {admin.map((person) => (
               <div key={person.name} className="text-center">
-                <img
-                  src="/images/thomas-berg-green.jpg"
+                <Image
+                  src={withBasePath("/images/thomas-berg-green.jpg")}
                   alt={person.name}
+                  width={128}
+                  height={128}
                   className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                 />
                 <h3 className="text-xl font-bold">{person.name}</h3>

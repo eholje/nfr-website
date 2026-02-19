@@ -14,6 +14,7 @@ const sampleNews = [
     excerpt:
       "Norsk Førstehjelpsråd har fått innvilget prosjektmidler fra EU-kommisjonen gjennom Erasmus+ for å utvikle risikoprofilbasert førstehjelpsopplæring sammen med Dansk Førstehjelpsråd og latviske helsemyndigheter.",
     slug: "eu-erasmus-prosjekt",
+    image: withBasePath("/images/hero-fjord.jpg"),
   },
   {
     title: "Banebrytende samfunnsøkonomisk analyse med BI",
@@ -21,6 +22,7 @@ const sampleNews = [
     excerpt:
       "I samarbeid med Handelshøyskolen BI publiserer NFR verdens første samfunnsøkonomiske analyse av førstehjelpsopplæring. Konklusjonen er klar: investeringen gir eventyrlig avkastning.",
     slug: "samfunnsokonomisk-analyse-bi",
+    image: withBasePath("/images/forstehjelpskonferansen.jpg"),
   },
   {
     title: "NFR på Stortinget om nasjonalt mandat",
@@ -28,6 +30,7 @@ const sampleNews = [
     excerpt:
       "Generalsekretær Thomas Berg Green møtte helsepolitikere på Stortinget i forbindelse med representantforslaget om en nasjonal strategi for førstehjelpsopplæring.",
     slug: "nfr-stortinget-mandat",
+    image: withBasePath("/images/stortinget-lion.jpg"),
   },
 ];
 
@@ -126,13 +129,14 @@ export default function Home() {
       <section className="py-28 bg-nfr-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-nfr-primary/5 to-nfr-sage/15 flex items-center justify-center overflow-hidden">
-              <div className="text-center p-8">
-                <svg className="w-24 h-24 text-nfr-primary/20 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 8.25c0-2.485-2.099-4.502-4.688-4.502-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.748 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                </svg>
-                <p className="text-nfr-muted text-sm">Bilde fra aktivitet</p>
-              </div>
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
+              <Image
+                src={withBasePath("/images/hero-fjord.jpg")}
+                alt="Norsk natur — førstehjelp for hele Norge"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
             <div>
               <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
