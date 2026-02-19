@@ -6,33 +6,9 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { NewsCard } from "@/components/NewsCard";
 import { CTABanner } from "@/components/CTABanner";
 import { withBasePath } from "@/lib/basePath";
+import { articles } from "@/data/articles";
 
-const sampleNews = [
-  {
-    title: "NFR tildelt EU-midler gjennom Erasmus+",
-    date: "2. september 2025",
-    excerpt:
-      "Norsk Førstehjelpsråd har fått innvilget prosjektmidler fra EU-kommisjonen gjennom Erasmus+ for å utvikle risikoprofilbasert førstehjelpsopplæring sammen med Dansk Førstehjelpsråd og latviske helsemyndigheter.",
-    slug: "eu-erasmus-prosjekt",
-    image: withBasePath("/images/hero-fjord.jpg"),
-  },
-  {
-    title: "Banebrytende samfunnsøkonomisk analyse med BI",
-    date: "4. desember 2025",
-    excerpt:
-      "I samarbeid med Handelshøyskolen BI publiserer NFR verdens første samfunnsøkonomiske analyse av førstehjelpsopplæring. Konklusjonen er klar: investeringen gir eventyrlig avkastning.",
-    slug: "samfunnsokonomisk-analyse-bi",
-    image: withBasePath("/images/forstehjelpskonferansen.jpg"),
-  },
-  {
-    title: "NFR på Stortinget om nasjonalt mandat",
-    date: "15. mars 2025",
-    excerpt:
-      "Generalsekretær Thomas Berg Green møtte helsepolitikere på Stortinget i forbindelse med representantforslaget om en nasjonal strategi for førstehjelpsopplæring.",
-    slug: "nfr-stortinget-mandat",
-    image: withBasePath("/images/stortinget-lion.jpg"),
-  },
-];
+const homeNews = articles.slice(0, 3);
 
 const memberOrgs = [
   "Røde Kors",
@@ -233,7 +209,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sampleNews.map((article) => (
+            {homeNews.map((article) => (
               <NewsCard key={article.slug} {...article} />
             ))}
           </div>
