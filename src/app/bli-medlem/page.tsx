@@ -1,5 +1,12 @@
-import { redirect } from "next/navigation";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bli medlem — Norsk Førstehjelpsråd",
+  description: "Videresendt til Støtt oss.",
+};
 
 export default function BliMedlemRedirect() {
-  redirect("/stott-oss");
+  return (
+    <meta httpEquiv="refresh" content="0;url=/stott-oss" />
+  );
 }

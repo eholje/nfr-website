@@ -108,21 +108,8 @@ export default function NyheterOgInnsikt() {
                 <p className="text-nfr-body leading-relaxed mb-6">
                   {articles[0].excerpt}
                 </p>
-                <span className="inline-flex items-center gap-2 text-nfr-primary-mid font-semibold">
-                  Les mer
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
+                <span className="inline-flex items-center gap-2 text-nfr-muted text-sm">
+                  Fullstendig artikkel kommer snart
                 </span>
               </div>
             </article>

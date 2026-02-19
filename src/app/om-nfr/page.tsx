@@ -102,7 +102,7 @@ export default function OmNFR() {
       <ImpactNumbers />
 
       {/* Hvem vi er — navigation to sub-pages */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-nfr-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Hvem vi er"
@@ -232,21 +232,11 @@ export default function OmNFR() {
           <div className="max-w-md mx-auto">
             {admin.map((person) => (
               <div key={person.name} className="text-center">
-                <div className="w-32 h-32 rounded-full bg-nfr-primary/10 mx-auto mb-4 flex items-center justify-center">
-                  <svg
-                    className="w-12 h-12 text-nfr-primary"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                    />
-                  </svg>
-                </div>
+                <img
+                  src="/images/thomas-berg-green.jpg"
+                  alt={person.name}
+                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                />
                 <h3 className="text-xl font-bold">{person.name}</h3>
                 <p className="text-nfr-muted">{person.title}</p>
               </div>

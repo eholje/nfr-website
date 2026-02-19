@@ -33,7 +33,7 @@ export function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/for-instruktorer"
+                href="/kurs-og-opplaering"
                 className="rounded-full bg-nfr-accent px-8 py-4 text-center text-base font-semibold text-nfr-primary hover:bg-nfr-accent-dark transition-colors"
               >
                 Lær førstehjelp
