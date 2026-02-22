@@ -13,23 +13,16 @@ export const metadata: Metadata = {
     "Lær mer om Norsk Førstehjelpsråd, Norges normerende autoritet for førstehjelp med 28 medlemsorganisasjoner.",
 };
 
-const fagraadMembers = [
-  { name: "Leder av Fagrådet", title: "Fagrådet" },
-  { name: "Medlem", title: "Akuttmedisin" },
-  { name: "Medlem", title: "Anestesiologi" },
-  { name: "Medlem", title: "Prehospitalt arbeid" },
-  { name: "Medlem", title: "Traumatologi" },
+const fagraadDisciplines = [
+  "Akuttmedisin",
+  "Anestesiologi",
+  "Prehospitalt arbeid",
+  "Traumatologi",
+  "Allmennmedisin",
 ];
 
 const admin = [
   { name: "Thomas Berg Green", title: "Generalsekretær / CEO" },
-];
-
-const boardMembers = [
-  { name: "Styreleder", title: "Styreleder" },
-  { name: "Nestleder", title: "Nestleder" },
-  { name: "Styremedlem", title: "Styremedlem" },
-  { name: "Styremedlem", title: "Styremedlem" },
 ];
 
 const memberOrgs = [
@@ -183,18 +176,21 @@ export default function OmNFR() {
             </div>
             <div>
               <div className="bg-white rounded-2xl p-8 shadow-sm">
-                <h3 className="font-bold text-lg mb-6 text-nfr-dark">
-                  Fagrådsmedlemmer
+                <h3 className="font-bold text-lg mb-4 text-nfr-dark">
+                  Faglige disipliner representert
                 </h3>
-                <div className="space-y-4">
-                  {fagraadMembers.map((member, i) => (
+                <p className="text-sm text-nfr-muted mb-6 leading-relaxed">
+                  Fagrådet består av ledende spesialister fra norske sykehus og fagmiljøer, med ekspertise innen:
+                </p>
+                <div className="space-y-3">
+                  {fagraadDisciplines.map((discipline) => (
                     <div
-                      key={i}
-                      className="flex items-center gap-4 pb-4 border-b border-nfr-stone/50 last:border-0 last:pb-0"
+                      key={discipline}
+                      className="flex items-center gap-3 pb-3 border-b border-nfr-stone/50 last:border-0 last:pb-0"
                     >
-                      <div className="w-12 h-12 rounded-full bg-nfr-primary/10 flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-nfr-primary/10 flex items-center justify-center flex-shrink-0">
                         <svg
-                          className="w-6 h-6 text-nfr-primary"
+                          className="w-5 h-5 text-nfr-primary"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -203,22 +199,16 @@ export default function OmNFR() {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={1.5}
-                            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                            d="m4.5 12.75 6 6 9-13.5"
                           />
                         </svg>
                       </div>
-                      <div>
-                        <p className="font-semibold text-nfr-dark">
-                          {member.name}
-                        </p>
-                        <p className="text-sm text-nfr-muted">{member.title}</p>
-                      </div>
+                      <p className="font-semibold text-nfr-dark text-sm">
+                        {discipline}
+                      </p>
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-nfr-muted mt-6 italic">
-                  Fullstendig liste med navn oppdateres snart.
-                </p>
               </div>
             </div>
           </div>
@@ -282,36 +272,26 @@ export default function OmNFR() {
         </div>
       </section>
 
-      {/* Board — toned down */}
+      {/* Board — descriptive */}
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading title="Styret" centered />
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-3xl mx-auto">
-            {boardMembers.map((member, i) => (
-              <div key={i} className="text-center">
-                <div className="w-20 h-20 rounded-full bg-nfr-cream mx-auto mb-3 flex items-center justify-center">
-                  <svg
-                    className="w-8 h-8 text-nfr-muted"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="font-semibold text-sm">{member.name}</h3>
-                <p className="text-xs text-nfr-muted">{member.title}</p>
-              </div>
-            ))}
+          <div className="max-w-2xl mx-auto text-center">
+            <SectionHeading title="Styret" centered />
+            <p className="text-nfr-body leading-relaxed">
+              NFRs styre velges av generalforsamlingen og består av representanter
+              fra medlemsorganisasjonene. Styret har det overordnede ansvaret for
+              organisasjonens strategi, økonomi og faglige retning.
+            </p>
+            <Link
+              href="/kontakt"
+              className="inline-flex items-center gap-2 mt-6 text-nfr-primary-mid font-semibold text-sm hover:underline"
+            >
+              Kontakt oss for mer informasjon om styret
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
-          <p className="text-center text-xs text-nfr-muted mt-6 italic">
-            Navn på styremedlemmer oppdateres snart.
-          </p>
         </div>
       </section>
 

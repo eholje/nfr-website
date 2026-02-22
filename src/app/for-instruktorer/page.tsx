@@ -106,7 +106,7 @@ export default function ForInstruktorer() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
-              Under utvikling
+              Nytt fra NFR
             </p>
             <SectionHeading
               title="Førstehjelpsakademiet"

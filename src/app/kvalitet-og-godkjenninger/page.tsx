@@ -119,8 +119,8 @@ export default function KvalitetOgGodkjenninger() {
               </div>
             ))}
           </div>
-          <p className="text-center text-sm text-nfr-muted mt-10 italic">
-            Søkbare registre med filtrering lanseres i fase 2.
+          <p className="text-center text-sm text-nfr-muted mt-10">
+            Kontakt NFR for å verifisere godkjenninger eller søke i registrene.
           </p>
         </div>
       </section>
@@ -250,9 +250,8 @@ export default function KvalitetOgGodkjenninger() {
               </div>
             ))}
           </div>
-          <p className="text-center text-sm text-nfr-muted mt-8 italic">
-            Fullstendig liste over alle 12 godkjente kurskonsepter oppdateres i
-            samarbeid med Fagrådet.
+          <p className="text-center text-sm text-nfr-muted mt-8">
+            Kontakt NFR for fullstendig oversikt over alle 12 godkjente kurskonsepter.
           </p>
         </div>
       </section>
@@ -275,9 +274,9 @@ export default function KvalitetOgGodkjenninger() {
                 skoler og organisasjoner for å verifisere instruktørers
                 godkjenning.
               </p>
-              <p className="relative text-white/50 text-sm italic mb-8">
-                Søkbart register integreres på nettstedet i fase 2. Kontakt
-                NFR for å verifisere godkjenninger i mellomtiden.
+              <p className="relative text-white/50 text-sm mb-8">
+                Registeret administreres av NFR. Ta kontakt for å verifisere
+                en instruktørs godkjenning.
               </p>
               <Link
                 href="/kontakt"

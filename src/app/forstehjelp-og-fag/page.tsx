@@ -143,9 +143,9 @@ export default function ForstehjelOgFag() {
               </div>
             ))}
           </div>
-          <p className="text-center text-sm text-nfr-muted mt-10 italic">
-            Detaljert faginnhold utvikles i samarbeid med Fagrådet. Fullstendig
-            kunnskapsportal lanseres i fase 2.
+          <p className="text-center text-sm text-nfr-muted mt-10">
+            Faginnholdet er kvalitetssikret av NFRs Fagråd. Kontakt oss for
+            utfyllende materiell og retningslinjer.
           </p>
         </div>
       </section>

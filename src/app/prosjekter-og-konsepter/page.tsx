@@ -27,7 +27,7 @@ const projects = [
   },
   {
     title: "Førstehjelpsakademiet",
-    status: "Under utvikling",
+    status: "Kommer 2026",
     description:
       "Ny digital plattform som gir instruktører tilgang til oppdatert kursmateriell, kvalitetssikringsverktøy og faglig påfyll. Sikrer at alle godkjente instruktører har tilgang til de nyeste retningslinjene.",
     highlight: "Digital plattform",
