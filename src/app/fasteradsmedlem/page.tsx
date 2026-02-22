@@ -218,29 +218,34 @@ export default function Fasteradsmedlem() {
               helse, beredskap, forsvar, frivillighet og næringsliv.
             </p>
           </div>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 lg:gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
             {members.map((member) => {
               const inner = (
-                <div className="flex flex-col items-center text-center gap-3 p-4 rounded-xl hover:bg-nfr-cream/60 transition-colors group">
-                  <div className="w-16 h-16 flex items-center justify-center rounded-full bg-nfr-cream group-hover:bg-white transition-colors overflow-hidden">
+                <div className="flex items-center gap-4 p-5 rounded-2xl bg-nfr-cream/40 hover:bg-nfr-cream transition-colors group border border-transparent hover:border-nfr-stone/50">
+                  <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center rounded-xl bg-white shadow-sm overflow-hidden">
                     {member.logo ? (
                       <img
                         src={withBasePath(member.logo)}
                         alt={`${member.name} logo`}
-                        width={48}
-                        height={48}
-                        className="w-10 h-10 object-contain"
+                        width={64}
+                        height={64}
+                        className="w-12 h-12 object-contain"
                         loading="lazy"
                       />
                     ) : (
-                      <span className="text-lg font-bold text-nfr-primary/50">
+                      <span className="text-xl font-bold text-nfr-primary/40">
                         {member.name.charAt(0)}
                       </span>
                     )}
                   </div>
-                  <span className="text-xs font-medium text-nfr-dark leading-tight line-clamp-2 group-hover:text-nfr-primary-mid transition-colors">
-                    {member.shortName || member.name}
-                  </span>
+                  <div className="min-w-0">
+                    <span className="text-sm font-semibold text-nfr-dark leading-tight block group-hover:text-nfr-primary-mid transition-colors">
+                      {member.shortName || member.name}
+                    </span>
+                    <span className="text-xs text-nfr-muted mt-0.5 block">
+                      {member.category}
+                    </span>
+                  </div>
                 </div>
               );
 
