@@ -25,6 +25,11 @@ const challenges = [
 
 const impact = [
   {
+    value: "12:1",
+    label: "Samfunnsøkonomisk avkastning",
+    source: "Handelshøyskolen BI / NFR 2025",
+  },
+  {
     value: "28",
     label: "Organisasjoner i NFR",
     source: "Norsk Førstehjelpsråd",
@@ -35,19 +40,14 @@ const impact = [
     source: "Medlemsorganisasjonene",
   },
   {
-    value: "78%",
-    label: "Får HLR av tilstedeværende",
-    source: "Norsk hjertestansregister",
-  },
-  {
     value: "457",
     label: "Liv reddet i 2024",
     source: "Norsk hjertestansregister",
   },
   {
-    value: "9",
-    label: "Strategiske satsningsområder",
-    source: "NFR Strategi 2025–2030",
+    value: "78%",
+    label: "Får HLR av tilstedeværende",
+    source: "Norsk hjertestansregister",
   },
 ];
 

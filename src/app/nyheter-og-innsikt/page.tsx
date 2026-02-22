@@ -77,6 +77,39 @@ export default function NyheterOgInnsikt() {
             </Link>
           </div>
 
+          {/* Key resource highlight */}
+          <div className="mb-16 bg-nfr-midnight rounded-2xl p-8 lg:p-10 relative overflow-hidden">
+            <div className="absolute inset-0 nordlys-glow pointer-events-none" />
+            <div className="relative flex flex-col lg:flex-row lg:items-center gap-6">
+              <div className="flex-1">
+                <span className="text-xs font-semibold uppercase tracking-wider text-nfr-gold">
+                  Rapport
+                </span>
+                <h3 className="text-xl lg:text-2xl text-white mt-2 mb-2">
+                  Samfunnsøkonomisk analyse: 12:1 avkastning
+                </h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Verdens første samfunnsøkonomiske analyse av
+                  førstehjelpsopplæring, utarbeidet med Handelshøyskolen BI.
+                </p>
+              </div>
+              <div className="flex gap-3 flex-shrink-0">
+                <Link
+                  href="/nyheter-og-innsikt/samfunnsokonomisk-analyse-bi"
+                  className="rounded-full bg-nfr-gold px-6 py-3 text-sm font-semibold text-nfr-midnight hover:bg-nfr-gold-soft transition-colors whitespace-nowrap"
+                >
+                  Les mer
+                </Link>
+                <Link
+                  href="/kontakt"
+                  className="rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white hover:bg-white/5 transition-colors whitespace-nowrap"
+                >
+                  Be om rapporten
+                </Link>
+              </div>
+            </div>
+          </div>
+
           {/* Article grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {rest.map((article) => (

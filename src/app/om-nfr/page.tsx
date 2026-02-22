@@ -148,7 +148,7 @@ export default function OmNFR() {
       </section>
 
       {/* Fagrådet — prominent, before board */}
-      <section id="fagraadet" className="py-20 bg-nfr-cream">
+      <section id="fagraadet" className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>

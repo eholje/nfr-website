@@ -11,20 +11,20 @@ import { articles } from "@/data/articles";
 const homeNews = articles.slice(0, 3);
 
 const memberOrgs = [
-  "Røde Kors",
-  "Norsk Folkehjelp",
-  "Norsk Luftambulanse",
-  "Helsedirektoratet",
-  "Norges Livredningsselskap",
-  "Redningsselskapet",
-  "Norske Kvinners Sanitetsforening",
-  "Forsvarets Sanitet",
-  "Norsk Resuscitasjonsråd",
-  "DSB",
-  "Trygg Trafikk",
-  "LHL",
-  "Norges Speiderforbund",
-  "Nasjonalforeningen for Folkehelsen",
+  { name: "Røde Kors", logo: "/images/logos/rode-kors.png" },
+  { name: "Norsk Folkehjelp", logo: "/images/logos/norsk-folkehjelp.png" },
+  { name: "Helsedirektoratet", logo: "/images/logos/helsedirektoratet.png" },
+  { name: "DSB", logo: "/images/logos/dsb.png" },
+  { name: "Forsvarets Sanitet", logo: "/images/logos/forsvaret.png" },
+  { name: "Norsk Luftambulanse", logo: "/images/logos/norsk-luftambulanse.png" },
+  { name: "Trygg Trafikk", logo: "/images/logos/trygg-trafikk.png" },
+  { name: "LHL", logo: "/images/logos/lhl.png" },
+  { name: "Norske Kvinners Sanitetsforening", logo: "/images/logos/sanitetskvinnene.png" },
+  { name: "Norges Speiderforbund", logo: "/images/logos/norges-speiderforbund.png" },
+  { name: "Redningsselskapet", logo: "/images/logos/redningsselskapet.png" },
+  { name: "Nasjonalforeningen for Folkehelsen", logo: "/images/logos/nasjonalforeningen.png" },
+  { name: "Norges Livredningsselskap", logo: "/images/logos/norges-livredningsselskap.png" },
+  { name: "Norsk Resuscitasjonsråd", logo: "/images/logos/nrr.png" },
 ];
 
 export default function Home() {
@@ -359,14 +359,25 @@ export default function Home() {
             subtitle="28 organisasjoner som sammen arbeider for bedre førstehjelp i Norge"
             centered
           />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
-            {memberOrgs.map((name) => (
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-5">
+            {memberOrgs.map((org) => (
               <div
-                key={name}
-                className="rounded-xl bg-white flex items-center justify-center p-5 hover:shadow-md transition-shadow min-h-[80px]"
+                key={org.name}
+                className="flex flex-col items-center gap-2 p-4"
+                title={org.name}
               >
-                <span className="text-sm font-medium text-nfr-dark text-center leading-tight">
-                  {name}
+                <div className="w-16 h-16 flex items-center justify-center rounded-xl bg-white shadow-sm overflow-hidden">
+                  <img
+                    src={withBasePath(org.logo)}
+                    alt={`${org.name} logo`}
+                    width={48}
+                    height={48}
+                    className="w-10 h-10 object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="text-xs text-nfr-muted text-center leading-tight">
+                  {org.name}
                 </span>
               </div>
             ))}
