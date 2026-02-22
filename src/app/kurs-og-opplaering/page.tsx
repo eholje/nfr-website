@@ -55,6 +55,8 @@ export default function KursOgOpplaering() {
         breadcrumb={[
           { label: "Kurs & opplæring", href: "/kurs-og-opplaering" },
         ]}
+        image="/images/pages/hlr-trening.jpg"
+        imageAlt="Hjerte-lungeredning — praktisk førstehjelpsopplæring"
       />
 
       {/* NFR's role */}

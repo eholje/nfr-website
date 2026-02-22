@@ -15,6 +15,8 @@ export default function ForInstruktorer() {
         title="For instruktører"
         subtitle="Ressurser, retningslinjer og verktøy for Norges 4 027 førstehjelpsinstruktører"
         breadcrumb={[{ label: "For instruktører", href: "/for-instruktorer" }]}
+        image="/images/pages/fjord-solnedgang.jpg"
+        imageAlt="Norsk fjordlandskap i solnedgang"
       />
 
       {/* Intro */}

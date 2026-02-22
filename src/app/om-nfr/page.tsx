@@ -70,6 +70,8 @@ export default function OmNFR() {
         title="Om Norsk Førstehjelpsråd"
         subtitle="Norges normerende autoritet for førstehjelp siden 1932"
         breadcrumb={[{ label: "Om NFR", href: "/om-nfr" }]}
+        image="/images/stortinget-lion.jpg"
+        imageAlt="Stortingets løve — symbol på nasjonal autoritet"
       />
 
       {/* Mission */}

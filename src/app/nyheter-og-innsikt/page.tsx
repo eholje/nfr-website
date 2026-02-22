@@ -24,6 +24,8 @@ export default function NyheterOgInnsikt() {
         breadcrumb={[
           { label: "Nyheter & innsikt", href: "/nyheter-og-innsikt" },
         ]}
+        image="/images/pages/data-analyse.jpg"
+        imageAlt="Dataanalyse og innsikt"
       />
 
       <section className="py-20">

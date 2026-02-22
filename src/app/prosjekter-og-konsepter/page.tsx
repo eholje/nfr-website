@@ -79,6 +79,8 @@ export default function ProsjekterOgKonsepter() {
         breadcrumb={[
           { label: "Prosjekter & konsepter", href: "/prosjekter-og-konsepter" },
         ]}
+        image="/images/forstehjelpskonferansen.jpg"
+        imageAlt="Førstehjelpskonferansen — Norges største fagkonferanse for førstehjelp"
       />
 
       {/* Pågående prosjekter */}

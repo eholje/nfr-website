@@ -35,7 +35,7 @@ export default function Home() {
 
       {/* Beredskap og sivilsamfunnet */}
       <section className="py-28 bg-nfr-midnight relative overflow-hidden">
-        <div className="absolute inset-0 nordlys-glow pointer-events-none opacity-50" />
+        <div className="absolute inset-0 nordlys-glow pointer-events-none" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-nfr-gold font-medium tracking-wide uppercase text-sm mb-4">
             Beredskap og sivilsamfunnet

@@ -90,7 +90,7 @@ export function ImpactNumbers() {
     <>
       {/* Part 1: Utfordringen */}
       <section ref={challengeRef} className="bg-nfr-midnight py-24 relative overflow-hidden">
-        <div className="absolute inset-0 nordlys-glow pointer-events-none opacity-60" />
+        <div className="absolute inset-0 nordlys-glow pointer-events-none" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-nfr-gold font-medium tracking-wide uppercase text-sm mb-4">
             Utfordringen

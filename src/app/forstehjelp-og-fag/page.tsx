@@ -80,6 +80,8 @@ export default function ForstehjelOgFag() {
         title="Førstehjelp & fag"
         subtitle="Nasjonal kunnskapsportal — retningslinjer, faglige anbefalinger og livreddende kunnskap"
         breadcrumb={[{ label: "Førstehjelp & fag", href: "/forstehjelp-og-fag" }]}
+        image="/images/pages/snoredningsmenn.jpg"
+        imageAlt="Redningsmannskap med snøscooter i norske fjell"
       />
 
       {/* Core principle */}

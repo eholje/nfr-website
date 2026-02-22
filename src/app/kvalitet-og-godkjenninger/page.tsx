@@ -55,6 +55,8 @@ export default function KvalitetOgGodkjenninger() {
         breadcrumb={[
           { label: "Kvalitet & godkjenninger", href: "/kvalitet-og-godkjenninger" },
         ]}
+        image="/images/pages/timeglass.jpg"
+        imageAlt="Timeglass — kvalitet og presisjon i førstehjelpsopplæring"
       />
 
       {/* Intro */}
@@ -260,7 +262,7 @@ export default function KvalitetOgGodkjenninger() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="bg-nfr-midnight rounded-2xl p-10 lg:p-14 text-center relative overflow-hidden">
-              <div className="absolute inset-0 nordlys-glow pointer-events-none opacity-40" />
+              <div className="absolute inset-0 nordlys-glow pointer-events-none" />
               <p className="relative text-nfr-gold font-medium tracking-wide uppercase text-sm mb-4">
                 Instruktørregisteret
               </p>

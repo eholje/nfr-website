@@ -1,20 +1,37 @@
 import Link from "next/link";
+import { withBasePath } from "@/lib/basePath";
 
 interface PageHeroProps {
   title: string;
   subtitle?: string;
   breadcrumb?: { label: string; href: string }[];
+  image?: string;
+  imageAlt?: string;
 }
 
-export function PageHero({ title, subtitle, breadcrumb }: PageHeroProps) {
+export function PageHero({ title, subtitle, breadcrumb, image, imageAlt }: PageHeroProps) {
   return (
-    <section className="bg-nfr-midnight pt-32 pb-20 relative overflow-hidden">
+    <section className={`bg-nfr-midnight relative overflow-hidden ${image ? "pt-32 pb-24 min-h-[400px] lg:min-h-[480px] flex items-end" : "pt-32 pb-20"}`}>
+      {/* Background image (optional) */}
+      {image && (
+        <>
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url('${withBasePath(image)}')` }}
+            role="img"
+            aria-label={imageAlt}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#000F44]/90 via-[#000F44]/60 to-[#000F44]/30" />
+        </>
+      )}
       {/* Nordlys shimmer */}
-      <div className="absolute inset-0 nordlys-glow pointer-events-none opacity-50" />
+      <div className="absolute inset-0 nordlys-glow pointer-events-none" />
       {/* Diagonal accent line */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-nfr-gold/[0.04] to-transparent" />
+      {!image && (
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-nfr-gold/[0.04] to-transparent" />
+      )}
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         {breadcrumb && (
           <nav aria-label="Brødsmulesti" className="mb-6">
             <ol className="flex items-center gap-2 text-sm text-white/50">
@@ -40,7 +57,7 @@ export function PageHero({ title, subtitle, breadcrumb }: PageHeroProps) {
         )}
         <h1 className="text-4xl lg:text-6xl text-white leading-tight">{title}</h1>
         {subtitle && (
-          <p className="mt-6 text-lg text-white/60 max-w-2xl leading-relaxed">{subtitle}</p>
+          <p className="mt-6 text-lg text-white/70 max-w-2xl leading-relaxed">{subtitle}</p>
         )}
       </div>
       {/* Bottom accent line — gold */}
