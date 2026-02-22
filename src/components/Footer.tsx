@@ -3,7 +3,7 @@ import { withBasePath } from "@/lib/basePath";
 
 export function Footer() {
   return (
-    <footer className="bg-nfr-primary text-white">
+    <footer className="bg-nfr-midnight text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
@@ -24,7 +24,7 @@ export function Footer() {
 
           {/* Om NFR */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-nfr-accent mb-6">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-nfr-gold mb-6">
               Om NFR
             </h3>
             <nav className="space-y-3">
@@ -47,7 +47,7 @@ export function Footer() {
 
           {/* Fag & opplæring */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-nfr-accent mb-6">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-nfr-gold mb-6">
               Fag & opplæring
             </h3>
             <nav className="space-y-3">
@@ -71,7 +71,7 @@ export function Footer() {
 
           {/* Kontakt & støtt */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-nfr-accent mb-6">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-nfr-gold mb-6">
               Kontakt & støtt
             </h3>
             <div className="space-y-3 text-sm text-white/50 mb-6">

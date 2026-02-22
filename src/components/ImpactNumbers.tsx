@@ -89,9 +89,10 @@ export function ImpactNumbers() {
   return (
     <>
       {/* Part 1: Utfordringen */}
-      <section ref={challengeRef} className="bg-nfr-primary py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+      <section ref={challengeRef} className="bg-nfr-midnight py-24 relative overflow-hidden">
+        <div className="absolute inset-0 nordlys-glow pointer-events-none opacity-60" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-nfr-gold font-medium tracking-wide uppercase text-sm mb-4">
             Utfordringen
           </p>
           <h2 className="text-3xl sm:text-4xl text-white mb-16 font-[family-name:var(--font-dm-serif)]">
@@ -106,7 +107,7 @@ export function ImpactNumbers() {
                 }`}
                 style={{ animationDelay: `${i * 150}ms` }}
               >
-                <div className="text-6xl lg:text-7xl xl:text-8xl text-nfr-accent mb-4 font-[family-name:var(--font-dm-serif)]">
+                <div className="text-6xl lg:text-7xl xl:text-8xl gold-highlight mb-4 font-[family-name:var(--font-dm-serif)]">
                   {stat.value}
                 </div>
                 <div className="text-lg font-semibold text-white/90 mb-1">

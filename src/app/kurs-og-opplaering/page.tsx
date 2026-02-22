@@ -61,7 +61,7 @@ export default function KursOgOpplaering() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+            <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
               Vår rolle
             </p>
             <h2 className="text-3xl lg:text-4xl mb-6">
@@ -88,7 +88,7 @@ export default function KursOgOpplaering() {
       <section className="py-20 bg-nfr-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+            <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
               Kvalitetssystemet
             </p>
             <h2 className="text-3xl lg:text-4xl mb-4">
@@ -108,7 +108,7 @@ export default function KursOgOpplaering() {
                 <div className="w-14 h-14 rounded-xl bg-nfr-primary/10 text-nfr-primary flex items-center justify-center mb-6">
                   {item.icon}
                 </div>
-                <p className="text-3xl font-bold text-nfr-accent mb-2">
+                <p className="text-3xl font-bold text-nfr-accent-text mb-2">
                   {item.count}
                 </p>
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
@@ -220,7 +220,7 @@ export default function KursOgOpplaering() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
                 Kurslederutdanning
               </p>
               <h2 className="text-3xl lg:text-4xl mb-6">
@@ -264,7 +264,7 @@ export default function KursOgOpplaering() {
                   "Norsk Luftambulanse",
                 ].map((org) => (
                   <li key={org} className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-nfr-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-nfr-accent-text flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m4.5 12.75 6 6 9-13.5" />
                     </svg>
                     {org}

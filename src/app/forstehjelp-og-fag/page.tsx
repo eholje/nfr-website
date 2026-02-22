@@ -86,7 +86,7 @@ export default function ForstehjelOgFag() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+            <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
               Grunnprinsippet
             </p>
             <SectionHeading
@@ -114,7 +114,7 @@ export default function ForstehjelOgFag() {
       <section className="py-20 bg-nfr-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+            <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
               Fagrådets anbefalinger
             </p>
             <h2 className="text-3xl lg:text-4xl mb-4">
@@ -153,7 +153,7 @@ export default function ForstehjelOgFag() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
                 Myteknusing
               </p>
               <SectionHeading
@@ -201,7 +201,7 @@ export default function ForstehjelOgFag() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
-              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
                 Ofte stilte spørsmål
               </p>
               <h2 className="text-3xl lg:text-4xl mb-4">

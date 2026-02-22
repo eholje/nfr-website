@@ -13,6 +13,15 @@
   --nfr-dark: #1A1A1A;
   --nfr-body: #2D2D2D;
   --nfr-muted: #5C5A55;
+
+  /* Midnight navy tones — Thomas's PPTX palette */
+  --nfr-midnight: #000F44;
+  --nfr-midnight-mid: #0F2368;
+  --nfr-midnight-light: #1A3080;
+
+  /* Bright gold for dark backgrounds — "gulleffekt" */
+  --nfr-gold: #FFC000;
+  --nfr-gold-soft: #FFD54F;
 }
 
 @theme inline {
@@ -27,6 +36,11 @@
   --color-nfr-dark: var(--nfr-dark);
   --color-nfr-body: var(--nfr-body);
   --color-nfr-muted: var(--nfr-muted);
+  --color-nfr-midnight: var(--nfr-midnight);
+  --color-nfr-midnight-mid: var(--nfr-midnight-mid);
+  --color-nfr-midnight-light: var(--nfr-midnight-light);
+  --color-nfr-gold: var(--nfr-gold);
+  --color-nfr-gold-soft: var(--nfr-gold-soft);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-dm-serif);
 }
@@ -43,6 +57,46 @@
     font-family: var(--font-heading), Georgia, serif;
     font-weight: 400;
   }
+}
+
+/* Nordlys (aurora) shimmer animation */
+@keyframes nordlys {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.6;
+  }
+}
+
+.nordlys-glow {
+  background: linear-gradient(
+    120deg,
+    rgba(15, 35, 104, 0) 0%,
+    rgba(26, 48, 128, 0.4) 20%,
+    rgba(43, 120, 97, 0.3) 40%,
+    rgba(196, 151, 59, 0.15) 60%,
+    rgba(15, 35, 104, 0.3) 80%,
+    rgba(0, 15, 68, 0) 100%
+  );
+  background-size: 200% 200%;
+  animation: nordlys 12s ease-in-out infinite;
+}
+
+/* Gold text highlight effect */
+.gold-highlight {
+  background: linear-gradient(135deg, var(--nfr-gold) 0%, var(--nfr-gold-soft) 50%, var(--nfr-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @keyframes count-up {
@@ -76,5 +130,8 @@ html {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+  .nordlys-glow {
+    animation: none;
   }
 }

@@ -34,12 +34,10 @@ export default function Home() {
       <ImpactNumbers />
 
       {/* Beredskap og sivilsamfunnet */}
-      <section className="py-28 bg-nfr-primary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] rounded-full bg-nfr-sage blur-[100px]" />
-        </div>
+      <section className="py-28 bg-nfr-midnight relative overflow-hidden">
+        <div className="absolute inset-0 nordlys-glow pointer-events-none opacity-50" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+          <p className="text-nfr-gold font-medium tracking-wide uppercase text-sm mb-4">
             Beredskap og sivilsamfunnet
           </p>
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -55,7 +53,7 @@ export default function Home() {
                 grunnmuren i et robust sivilsamfunn.
               </p>
               <div className="bg-white/10 rounded-2xl p-8 mb-8">
-                <p className="text-4xl lg:text-5xl font-bold text-nfr-accent mb-3">78%</p>
+                <p className="text-4xl lg:text-5xl font-bold gold-highlight mb-3">78%</p>
                 <p className="text-white/80 leading-relaxed">
                   mener husholdninger må kunne klare seg uten samfunnets hjelp
                   i én uke
@@ -64,13 +62,13 @@ export default function Home() {
               </div>
               <Link
                 href="/stott-oss"
-                className="inline-flex items-center gap-2 rounded-full bg-nfr-accent px-8 py-4 text-base font-semibold text-nfr-primary hover:bg-nfr-accent-dark transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-nfr-gold px-8 py-4 text-base font-semibold text-nfr-midnight hover:bg-nfr-gold-soft transition-colors"
               >
                 Finn din beredskapsvenn — lær førstehjelp sammen
               </Link>
             </div>
             <div className="space-y-6">
-              <blockquote className="border-l-2 border-nfr-accent/40 pl-6">
+              <blockquote className="border-l-2 border-nfr-gold/40 pl-6">
                 <p className="text-white/70 leading-relaxed italic">
                   &ldquo;Befolkningen er en viktig ressurs ved akutt sykdom og
                   alvorlige ulykker&rdquo;
@@ -79,7 +77,7 @@ export default function Home() {
                   Meld. St. 23 — Akuttmeldingen
                 </footer>
               </blockquote>
-              <blockquote className="border-l-2 border-nfr-accent/40 pl-6">
+              <blockquote className="border-l-2 border-nfr-gold/40 pl-6">
                 <p className="text-white/70 leading-relaxed italic">
                   &ldquo;Regjeringen skal sørge for at det sivile samfunnet er
                   forberedt på krise og krig&rdquo;

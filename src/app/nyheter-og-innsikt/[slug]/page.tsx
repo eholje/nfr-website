@@ -40,7 +40,7 @@ export default async function ArticlePage({
   return (
     <>
       {/* Hero image */}
-      <div className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] bg-nfr-primary">
+      <div className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] bg-nfr-midnight">
         <Image
           src={withBasePath(article.image)}
           alt={article.imageAlt}
@@ -49,7 +49,7 @@ export default async function ArticlePage({
           sizes="100vw"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-nfr-primary/80 via-nfr-primary/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-nfr-midnight/80 via-nfr-midnight/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 pb-10 pt-20">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center gap-2 text-sm text-white/60 mb-6">
@@ -68,7 +68,7 @@ export default async function ArticlePage({
                 {article.title}
               </span>
             </nav>
-            <time className="text-sm text-nfr-accent font-medium">
+            <time className="text-sm text-nfr-gold font-medium">
               {article.date}
             </time>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 leading-tight">

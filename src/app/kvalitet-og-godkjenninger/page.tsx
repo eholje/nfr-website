@@ -259,26 +259,27 @@ export default function KvalitetOgGodkjenninger() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <div className="bg-nfr-primary rounded-2xl p-10 lg:p-14 text-center">
-              <p className="text-nfr-accent font-medium tracking-wide uppercase text-sm mb-4">
+            <div className="bg-nfr-midnight rounded-2xl p-10 lg:p-14 text-center relative overflow-hidden">
+              <div className="absolute inset-0 nordlys-glow pointer-events-none opacity-40" />
+              <p className="relative text-nfr-gold font-medium tracking-wide uppercase text-sm mb-4">
                 Instruktørregisteret
               </p>
-              <h2 className="text-2xl lg:text-3xl text-white mb-4">
+              <h2 className="relative text-2xl lg:text-3xl text-white mb-4">
                 Finn godkjent instruktør
               </h2>
-              <p className="text-white/60 leading-relaxed mb-8">
+              <p className="relative text-white/60 leading-relaxed mb-8">
                 NFR fører et nasjonalt register over alle godkjente
                 førstehjelpsinstruktører. Registeret brukes av arbeidsgivere,
                 skoler og organisasjoner for å verifisere instruktørers
                 godkjenning.
               </p>
-              <p className="text-white/50 text-sm italic mb-8">
+              <p className="relative text-white/50 text-sm italic mb-8">
                 Søkbart register integreres på nettstedet i fase 2. Kontakt
                 NFR for å verifisere godkjenninger i mellomtiden.
               </p>
               <Link
                 href="/kontakt"
-                className="inline-flex items-center gap-2 rounded-full bg-nfr-accent px-8 py-4 text-base font-semibold text-nfr-primary hover:bg-nfr-accent-dark transition-colors"
+                className="relative inline-flex items-center gap-2 rounded-full bg-nfr-gold px-8 py-4 text-base font-semibold text-nfr-midnight hover:bg-nfr-gold-soft transition-colors"
               >
                 Kontakt oss for å verifisere godkjenning
               </Link>
