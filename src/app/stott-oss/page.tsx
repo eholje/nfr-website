@@ -103,45 +103,26 @@ export default function StottOss() {
             </div>
           </div>
 
-          {/* For politicians, business, foundations */}
-          <div className="bg-nfr-cream rounded-2xl p-10 lg:p-16 max-w-4xl mx-auto">
-            <SectionHeading
-              title="For beslutningstakere"
-              subtitle="Informasjon for politikere, virksomheter og stiftelser som ønsker å investere i førstehjelp"
-              centered
-            />
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Politikere",
-                  description: "NFR arbeider for et nasjonalt mandat for førstehjelpsopplæring. Vi har dokumentert 12:1 samfunnsøkonomisk avkastning.",
-                },
-                {
-                  title: "Virksomheter",
-                  description: "Investering i ansattes førstehjelp styrker beredskap, oppfyller lovkrav og viser samfunnsansvar.",
-                },
-                {
-                  title: "Stiftelser & fond",
-                  description: "Prosjektfinansiering av NFRs initiativer gir dokumentert samfunnsnytte og livreddende resultater.",
-                },
-              ].map((item) => (
-                <div key={item.title} className="text-center">
-                  <h3 className="font-bold text-lg mb-3">{item.title}</h3>
-                  <p className="text-nfr-muted text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-10">
+          {/* For politicians — link to dedicated page */}
+          <div className="bg-nfr-midnight rounded-2xl p-10 lg:p-16 max-w-4xl mx-auto relative overflow-hidden">
+            <div className="absolute inset-0 nordlys-glow pointer-events-none" />
+            <div className="relative text-center">
+              <p className="text-nfr-gold font-medium tracking-wide uppercase text-sm mb-4">
+                For beslutningstakere
+              </p>
+              <h2 className="text-2xl lg:text-3xl text-white mb-4">
+                Dokumentasjonsgrunnlag for politikere og departementer
+              </h2>
+              <p className="text-white/60 leading-relaxed max-w-2xl mx-auto mb-8">
+                Samfunnsøkonomisk analyse (12:1 avkastning), politisk
+                forankring i Stortingsmeldinger, og NFRs forespørsel om
+                nasjonalt mandat — samlet på én side.
+              </p>
               <Link
-                href="/kontakt"
-                className="inline-flex items-center gap-2 text-nfr-primary-mid font-semibold hover:gap-3 transition-all"
+                href="/for-beslutningstakere"
+                className="inline-flex items-center gap-2 rounded-full bg-nfr-gold px-8 py-4 font-semibold text-nfr-midnight hover:bg-nfr-gold-soft transition-colors"
               >
-                Last ned prospekt eller ta kontakt
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                Se dokumentasjonsgrunnlaget
               </Link>
             </div>
           </div>

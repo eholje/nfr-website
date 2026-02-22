@@ -60,12 +60,20 @@ export default function Home() {
                 </p>
                 <p className="text-white/50 text-sm mt-2">DSB/Ipsos 2024</p>
               </div>
-              <Link
-                href="/stott-oss"
-                className="inline-flex items-center gap-2 rounded-full bg-nfr-gold px-8 py-4 text-base font-semibold text-nfr-midnight hover:bg-nfr-gold-soft transition-colors"
-              >
-                Finn din beredskapsvenn — lær førstehjelp sammen
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/for-beslutningstakere"
+                  className="inline-flex items-center gap-2 rounded-full bg-nfr-gold px-8 py-4 text-base font-semibold text-nfr-midnight hover:bg-nfr-gold-soft transition-colors"
+                >
+                  For beslutningstakere
+                </Link>
+                <Link
+                  href="/stott-oss"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-4 text-base font-medium text-white hover:bg-white/5 transition-colors"
+                >
+                  Støtt arbeidet
+                </Link>
+              </div>
             </div>
             <div className="space-y-6">
               <blockquote className="border-l-2 border-nfr-gold/40 pl-6">
@@ -176,13 +184,22 @@ export default function Home() {
                   Det er robusthet det!&rdquo;
                 </p>
               </blockquote>
-              <div className="bg-white rounded-xl p-6">
+              <Link
+                href="/for-beslutningstakere"
+                className="block bg-white rounded-xl p-6 group hover:shadow-md transition-shadow"
+              >
                 <p className="text-nfr-body text-sm leading-relaxed">
                   NFR arbeider aktivt overfor Stortinget for et offentlig mandat
                   som nasjonal koordinator for førstehjelpsopplæring i
                   befolkningen.
                 </p>
-              </div>
+                <span className="inline-flex items-center gap-2 mt-3 text-nfr-primary-mid font-semibold text-sm group-hover:gap-3 transition-all">
+                  Les dokumentasjonsgrunnlaget
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
             </div>
           </div>
         </div>
