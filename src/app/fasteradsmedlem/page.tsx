@@ -4,7 +4,7 @@ import { withBasePath } from "@/lib/basePath";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Faste rådsmedlem - Norsk Førstehjelpsråd",
+  title: "Faste rådsmedlemmer - Norsk Førstehjelpsråd",
   description:
     "Oversikt over alle faste rådsmedlemmer i Norsk Førstehjelpsråd. 28 organisasjoner som sammen arbeider for bedre førstehjelp i Norge.",
 };
@@ -199,7 +199,7 @@ export default function Fasteradsmedlem() {
         subtitle="Norges bredeste koalisjon for førstehjelp — fra Røde Kors til Helsedirektoratet, fra Forsvarets Sanitet til Norges Speiderforbund"
         breadcrumb={[
           { label: "Om NFR", href: "/om-nfr" },
-          { label: "Faste rådsmedlem", href: "/fasteradsmedlem" },
+          { label: "Faste rådsmedlemmer", href: "/fasteradsmedlem" },
         ]}
       />
 
@@ -208,7 +208,7 @@ export default function Fasteradsmedlem() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-3">
-              Faste rådsmedlem
+              Faste rådsmedlemmer
             </p>
             <h2 className="text-2xl lg:text-3xl text-nfr-dark mb-3">
               Organisasjonene bak Norsk Førstehjelpsråd
