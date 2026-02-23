@@ -107,104 +107,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About intro */}
-      <section className="py-28 bg-nfr-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
-              <Image
-                src={withBasePath("/images/hero-fjord.jpg")}
-                alt="Norsk natur — førstehjelp for hele Norge"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <div>
-              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
-                Om oss
-              </p>
-              <SectionHeading
-                title="Norges faglige autoritet for førstehjelp"
-                subtitle="Vi setter normen, samordner fag og forvalter kvalitet — slik at flere liv blir reddet."
-              />
-              <p className="text-nfr-body leading-relaxed mb-8">
-                Norsk Førstehjelpsråd er den nasjonale paraplyorganisasjonen
-                som samler 28 organisasjoner med 2,2 millioner indirekte
-                medlemmer. Vi er den normerende autoriteten som sikrer
-                kvaliteten på førstehjelpsopplæring i Norge.
-              </p>
-              <Link
-                href="/om-nfr"
-                className="inline-flex items-center gap-2 text-nfr-primary-mid font-semibold hover:gap-3 transition-all"
-              >
-                Les mer om oss
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Generalsekretæren */}
-      <section className="py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-5">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden relative">
-                <Image
-                  src={withBasePath("/images/thomas-berg-green.jpg")}
-                  alt="Thomas Berg Green, Generalsekretær i Norsk Førstehjelpsråd"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                />
-              </div>
-            </div>
-            <div className="lg:col-span-7">
-              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
-                Generalsekretæren
-              </p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-nfr-dark mb-2">
-                Thomas Berg Green
-              </h2>
-              <p className="text-nfr-muted text-lg mb-8">
-                Generalsekretær, Norsk Førstehjelpsråd
-              </p>
-              <p className="text-nfr-body leading-relaxed mb-8">
-                Nesten 30 år i ambulansetjenesten. Leder NFR siden 2020.
-                Jobber fortsatt deltid som paramedisiner ved siden av rollen
-                som generalsekretær.
-              </p>
-              <blockquote className="border-l-4 border-nfr-accent pl-6 mb-8">
-                <p className="text-xl lg:text-2xl text-nfr-dark leading-relaxed italic">
-                  &ldquo;Vår visjon er helt tydelig: Alle kan gi førstehjelp!
-                  Det er robusthet det!&rdquo;
-                </p>
-              </blockquote>
-              <Link
-                href="/for-beslutningstakere"
-                className="block bg-white rounded-xl p-6 group hover:shadow-md transition-shadow"
-              >
-                <p className="text-nfr-body text-sm leading-relaxed">
-                  NFR arbeider aktivt overfor Stortinget for et offentlig mandat
-                  som nasjonal koordinator for førstehjelpsopplæring i
-                  befolkningen.
-                </p>
-                <span className="inline-flex items-center gap-2 mt-3 text-nfr-primary-mid font-semibold text-sm group-hover:gap-3 transition-all">
-                  Les dokumentasjonsgrunnlaget
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* News */}
       <section className="py-28 bg-nfr-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -347,6 +249,104 @@ export default function Home() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About intro */}
+      <section className="py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
+              <Image
+                src={withBasePath("/images/hero-fjord.jpg")}
+                alt="Norsk natur — førstehjelp for hele Norge"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+            <div>
+              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
+                Om oss
+              </p>
+              <SectionHeading
+                title="Norges faglige autoritet for førstehjelp"
+                subtitle="Vi setter normen, samordner fag og forvalter kvalitet — slik at flere liv blir reddet."
+              />
+              <p className="text-nfr-body leading-relaxed mb-8">
+                Norsk Førstehjelpsråd er den nasjonale paraplyorganisasjonen
+                som samler 28 organisasjoner med 2,2 millioner indirekte
+                medlemmer. Vi er den normerende autoriteten som sikrer
+                kvaliteten på førstehjelpsopplæring i Norge.
+              </p>
+              <Link
+                href="/om-nfr"
+                className="inline-flex items-center gap-2 text-nfr-primary-mid font-semibold hover:gap-3 transition-all"
+              >
+                Les mer om oss
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Generalsekretæren */}
+      <section className="py-28 bg-nfr-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-5">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden relative">
+                <Image
+                  src={withBasePath("/images/thomas-berg-green.jpg")}
+                  alt="Thomas Berg Green, Generalsekretær i Norsk Førstehjelpsråd"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+              </div>
+            </div>
+            <div className="lg:col-span-7">
+              <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
+                Generalsekretæren
+              </p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-nfr-dark mb-2">
+                Thomas Berg Green
+              </h2>
+              <p className="text-nfr-muted text-lg mb-8">
+                Generalsekretær, Norsk Førstehjelpsråd
+              </p>
+              <p className="text-nfr-body leading-relaxed mb-8">
+                Nesten 30 år i ambulansetjenesten. Leder NFR siden 2020.
+                Jobber fortsatt deltid som paramedisiner ved siden av rollen
+                som generalsekretær.
+              </p>
+              <blockquote className="border-l-4 border-nfr-accent pl-6 mb-8">
+                <p className="text-xl lg:text-2xl text-nfr-dark leading-relaxed italic">
+                  &ldquo;Vår visjon er helt tydelig: Alle kan gi førstehjelp!
+                  Det er robusthet det!&rdquo;
+                </p>
+              </blockquote>
+              <Link
+                href="/for-beslutningstakere"
+                className="block bg-white rounded-xl p-6 group hover:shadow-md transition-shadow"
+              >
+                <p className="text-nfr-body text-sm leading-relaxed">
+                  NFR arbeider aktivt overfor Stortinget for et offentlig mandat
+                  som nasjonal koordinator for førstehjelpsopplæring i
+                  befolkningen.
+                </p>
+                <span className="inline-flex items-center gap-2 mt-3 text-nfr-primary-mid font-semibold text-sm group-hover:gap-3 transition-all">
+                  Les dokumentasjonsgrunnlaget
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
