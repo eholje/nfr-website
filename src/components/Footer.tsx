@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { withBasePath } from "@/lib/basePath";
+import { organization } from "@/data/organization";
 
 export function Footer() {
   return (
@@ -112,10 +113,15 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
-          <p className="text-center text-sm text-white/50">
-            &copy; {new Date().getFullYear()} Norsk Førstehjelpsråd. Alle
-            rettigheter reservert.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-sm text-white/50">
+              &copy; {new Date().getFullYear()} Norsk Førstehjelpsråd. Alle
+              rettigheter reservert.
+            </p>
+            <p className="text-sm text-white/40">
+              Støtt oss: Vipps {organization.vipps} &middot; Konto {organization.bankAccount}
+            </p>
+          </div>
         </div>
       </div>
     </footer>

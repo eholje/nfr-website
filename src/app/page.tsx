@@ -393,6 +393,73 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Samarbeid */}
+      <section className="py-28 bg-nfr-midnight relative overflow-hidden">
+        <div className="absolute inset-0 nordlys-glow pointer-events-none opacity-50" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-nfr-gold font-medium tracking-wide uppercase text-sm mb-4">
+              Samarbeid
+            </p>
+            <h2 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-6 max-w-3xl mx-auto">
+              Styrk Norges førstehjelparbeid — sammen med oss
+            </h2>
+            <p className="text-lg text-white/70 leading-relaxed max-w-2xl mx-auto">
+              NFR samler 28 organisasjoner og når 2,2 millioner nordmenn.
+              Bli partner med den nasjonale autoriteten for førstehjelp.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                title: "Nasjonal rekkevidde",
+                stat: "28",
+                desc: "medlemsorganisasjoner med tilgang til hele Norge — fra storbyer til distrikter",
+              },
+              {
+                title: "Faglig tyngde",
+                stat: "Nr. 1",
+                desc: "Norges fremste fagmiljø for førstehjelp, med landets ledende eksperter i Fagrådet",
+              },
+              {
+                title: "Dokumentert effekt",
+                stat: "12:1",
+                desc: "Hver krone investert i førstehjelp gir 12 kroner tilbake til samfunnet (BI-studie)",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="bg-white/5 rounded-2xl p-8 text-center"
+              >
+                <p className="text-3xl lg:text-4xl font-bold gold-highlight mb-2">
+                  {item.stat}
+                </p>
+                <p className="text-white font-semibold mb-2">{item.title}</p>
+                <p className="text-white/50 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/stott-oss"
+              className="inline-flex items-center gap-2 rounded-full bg-nfr-gold px-8 py-4 text-base font-semibold text-nfr-midnight hover:bg-nfr-gold-soft transition-colors"
+            >
+              Bli samarbeidspartner
+            </Link>
+            <Link
+              href="/for-beslutningstakere"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-4 text-base font-medium text-white hover:bg-white/5 transition-colors"
+            >
+              For beslutningstakere
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <CTABanner />
     </>
   );
