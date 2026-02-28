@@ -259,8 +259,8 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
               <Image
-                src={withBasePath("/images/hero-fjord.jpg")}
-                alt="Norsk natur — førstehjelp for hele Norge"
+                src={withBasePath("/images/hero-nordlys.jpg")}
+                alt="Nordlys over norske fjell — førstehjelp for hele Norge"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

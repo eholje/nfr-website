@@ -7,10 +7,10 @@ export function Hero() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('${withBasePath("/images/hero-fjord.jpg")}')` }}
+        style={{ backgroundImage: `url('${withBasePath("/images/hero-nordlys.jpg")}')` }}
       />
       {/* Midnight navy gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#000F44]/95 via-[#000F44]/85 to-[#0F2368]/50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a1a12]/90 via-[#0a1a12]/70 to-[#1B3A2D]/30" />
       {/* Nordlys aurora shimmer */}
       <div className="absolute inset-0 nordlys-glow pointer-events-none" />
 
