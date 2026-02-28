@@ -95,7 +95,7 @@ export function ImpactNumbers() {
           <p className="text-nfr-gold font-medium tracking-wide uppercase text-sm mb-4">
             Utfordringen
           </p>
-          <h2 className="text-3xl sm:text-4xl text-white mb-16 font-[family-name:var(--font-dm-serif)]">
+          <h2 className="text-3xl sm:text-4xl text-white mb-16 font-bold">
             Hvorfor førstehjelp angår alle
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
@@ -107,7 +107,7 @@ export function ImpactNumbers() {
                 }`}
                 style={{ animationDelay: `${i * 150}ms` }}
               >
-                <div className="text-6xl lg:text-7xl xl:text-8xl gold-highlight mb-4 font-[family-name:var(--font-dm-serif)]">
+                <div className="text-6xl lg:text-7xl xl:text-8xl gold-highlight mb-4 font-bold">
                   {stat.value}
                 </div>
                 <div className="text-lg font-semibold text-white/90 mb-1">
@@ -131,7 +131,7 @@ export function ImpactNumbers() {
           <p className="text-nfr-accent-text font-medium tracking-wide uppercase text-sm mb-4">
             Vår innsats
           </p>
-          <h2 className="text-3xl sm:text-4xl text-nfr-primary mb-16 font-[family-name:var(--font-dm-serif)]">
+          <h2 className="text-3xl sm:text-4xl text-nfr-primary mb-16 font-bold">
             Resultater som teller
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
@@ -143,7 +143,7 @@ export function ImpactNumbers() {
                 }`}
                 style={{ animationDelay: `${i * 150}ms` }}
               >
-                <div className="text-5xl lg:text-6xl text-nfr-accent-text mb-3 font-[family-name:var(--font-dm-serif)]">
+                <div className="text-5xl lg:text-6xl text-nfr-accent-text mb-3 font-bold">
                   {stat.value}
                 </div>
                 <div className="text-sm font-semibold text-nfr-primary/90 uppercase tracking-wider mb-2">

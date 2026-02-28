@@ -41,8 +41,8 @@
   --color-nfr-midnight-light: var(--nfr-midnight-light);
   --color-nfr-gold: var(--nfr-gold);
   --color-nfr-gold-soft: var(--nfr-gold-soft);
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-dm-serif);
+  --font-sans: var(--font-open-sans);
+  --font-heading: var(--font-open-sans);
 }
 
 @layer base {
@@ -54,8 +54,8 @@
 
   h1, h2, h3, h4, h5, h6 {
     color: var(--nfr-dark);
-    font-family: var(--font-heading), Georgia, serif;
-    font-weight: 400;
+    font-family: var(--font-heading), system-ui, sans-serif;
+    font-weight: 700;
   }
 }
 

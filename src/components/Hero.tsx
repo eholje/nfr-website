@@ -21,7 +21,7 @@ export function Hero() {
             <p className="text-nfr-gold font-medium tracking-wide text-sm mb-6">
               #allekangiførstehjelp
             </p>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white leading-[0.95] mb-8 font-[family-name:var(--font-dm-serif)]">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white leading-[0.95] mb-8 font-bold">
               Du kan ikke gi
               <br />
               feil{" "}

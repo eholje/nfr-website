@@ -7,7 +7,7 @@ export default function NotFound() {
         <p className="text-nfr-accent-text font-medium tracking-wide text-sm mb-4">
           404
         </p>
-        <h1 className="text-4xl lg:text-6xl text-nfr-primary mb-6 font-[family-name:var(--font-dm-serif)]">
+        <h1 className="text-4xl lg:text-6xl text-nfr-primary mb-6 font-bold">
           Siden ble ikke funnet
         </h1>
         <p className="text-lg text-nfr-muted max-w-md mx-auto mb-10 leading-relaxed">

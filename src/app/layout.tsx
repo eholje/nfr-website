@@ -1,19 +1,13 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
-const dmSerif = DM_Serif_Display({
-  variable: "--font-dm-serif",
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
   subsets: ["latin"],
-  weight: ["400"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -45,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="no">
-      <body className={`${dmSerif.variable} ${inter.variable} antialiased`}>
+      <body className={`${openSans.variable} antialiased`}>
         <Navigation />
         <main id="main-content">{children}</main>
         <Footer />

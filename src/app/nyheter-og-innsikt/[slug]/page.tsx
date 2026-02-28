@@ -83,7 +83,7 @@ export default async function ArticlePage({
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             {/* Lead paragraph */}
-            <p className="text-xl md:text-2xl text-nfr-body leading-relaxed mb-10 font-[family-name:var(--font-dm-serif)]">
+            <p className="text-xl md:text-2xl text-nfr-body leading-relaxed mb-10 font-semibold">
               {article.excerpt}
             </p>
 
@@ -137,7 +137,7 @@ export default async function ArticlePage({
                   </div>
                   <div className="p-6">
                     <time className="text-sm text-nfr-muted">{rel.date}</time>
-                    <h3 className="text-lg mt-2 mb-2 font-[family-name:var(--font-dm-serif)] text-nfr-dark group-hover:text-nfr-primary-mid transition-colors">
+                    <h3 className="text-lg mt-2 mb-2 font-semibold text-nfr-dark group-hover:text-nfr-primary-mid transition-colors">
                       {rel.title}
                     </h3>
                   </div>

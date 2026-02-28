@@ -44,7 +44,7 @@ export function NewsCard({ title, date, excerpt, image, imageAlt, slug, href }: 
         </div>
         <div className="p-6">
           <time className="text-sm text-nfr-muted">{date}</time>
-          <h3 className="text-lg mt-2 mb-3 font-[family-name:var(--font-dm-serif)] text-nfr-dark group-hover:text-nfr-primary-mid transition-colors">
+          <h3 className="text-lg mt-2 mb-3 font-bold text-nfr-dark group-hover:text-nfr-primary-mid transition-colors">
             {title}
           </h3>
           <p className="text-sm text-nfr-body/80 leading-relaxed line-clamp-3">
