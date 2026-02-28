@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { CTABanner } from "@/components/CTABanner";
+import { WhyFirstAid } from "@/components/WhyFirstAid";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -111,6 +112,8 @@ export default function ForstehjelOgFag() {
           </div>
         </div>
       </section>
+
+      <WhyFirstAid />
 
       {/* Fagrådets anbefalinger */}
       <section className="py-20 bg-nfr-cream">
