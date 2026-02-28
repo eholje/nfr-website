@@ -183,8 +183,20 @@ export default function ForstehjelOgFag() {
                   fact: "Aldri — beskytt personen mot å skade seg, og ring 113.",
                 },
                 {
+                  myth: "Man kan svelge sin egen tunge",
+                  fact: "Nei — tungen er festet. Legg personen i sideleie for å sikre frie luftveier.",
+                },
+                {
                   myth: "Man skal ikke flytte en skadet person",
                   fact: "Sikkerhet først — flytt personen hvis det er fare for liv.",
+                },
+                {
+                  myth: "Å ta av hjelmen kan gjøre skaden verre",
+                  fact: "Frie luftveier er viktigere. En bevisstløs person med hjelm trenger fri luftvei — fjern hjelmen forsiktig.",
+                },
+                {
+                  myth: "Førstehjelp handler bare om hjertestans",
+                  fact: "Langt ifra. Sepsis (16 000+ tilfeller/år), slag (9 691), hjerteinfarkt (8 845), fall og forgiftninger — førstehjelp er relevant for et bredt spekter av akutte tilstander.",
                 },
               ].map((item) => (
                 <div key={item.myth} className="bg-nfr-cream rounded-xl p-6">
@@ -197,6 +209,55 @@ export default function ForstehjelOgFag() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Visste du at */}
+      <section className="py-20 bg-nfr-primary">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-nfr-gold font-medium tracking-wide uppercase text-sm mb-4">
+            Visste du at
+          </p>
+          <h2 className="text-3xl lg:text-4xl text-white mb-12 font-bold">
+            Barrierer og nye grenser for førstehjelp
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white/10 rounded-2xl p-8">
+              <p className="text-5xl lg:text-6xl gold-highlight font-bold mb-4">65%</p>
+              <p className="text-white font-semibold text-lg mb-2">
+                av menn er ukomfortable med å gi HLR til en ukjent kvinne
+              </p>
+              <p className="text-white/60 text-sm leading-relaxed mb-4">
+                63% av kvinner føler det samme. Ubehaget gjelder begge kjønn og
+                er en reell barriere for livreddende innsats. NFR jobber for å
+                bryte ned denne terskelen gjennom forenklede retningslinjer.
+              </p>
+              <p className="text-white/30 text-xs">Kilde: Røde Kors Førstehjelpsundersøkelsen 2025</p>
+            </div>
+            <div className="bg-white/10 rounded-2xl p-8">
+              <p className="text-5xl lg:text-6xl gold-highlight font-bold mb-4">16 000+</p>
+              <p className="text-white font-semibold text-lg mb-2">
+                tilfeller av sepsis (blodforgiftning) årlig i Norge
+              </p>
+              <p className="text-white/60 text-sm leading-relaxed mb-4">
+                Med en dødelighet på ca. 20% er sepsis en av de store skjulte
+                truslene. Til tross for dette har det aldri vært en del av
+                førstehjelpsopplæringen — før nå. NFR er pionerer i å inkludere
+                gjenkjenning av infeksjon/sepsis i førstehjelpspensum.
+              </p>
+              <p className="text-white/30 text-xs">Kilde: Helsedirektoratet / St. Olavs hospital</p>
+            </div>
+          </div>
+          <div className="mt-8 bg-white/5 rounded-2xl p-8">
+            <p className="text-white/70 leading-relaxed">
+              <span className="text-white font-semibold">Bare ca. 5% av befolkningen</span>{" "}
+              vil noen gang trenge å utføre HLR på en annen person. Men de som
+              gjør det, gjør en forskjell som ingen helsetjeneste kan erstatte i
+              de første kritiske minuttene. Derfor trenger alle grunnleggende
+              kunnskap — ikke bare de som jobber i helsevesenet.
+            </p>
+            <p className="text-white/30 text-xs mt-3">Kilde: RAKOS (Regionalt akuttmedisinsk kompetansesenter)</p>
           </div>
         </div>
       </section>
